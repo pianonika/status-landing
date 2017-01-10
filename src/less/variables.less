@@ -1,0 +1,81 @@
+// Базовые цвета
+
+@gray:                        #3c3c3c;
+@gray-light:                  #3a3a3a;
+@gray-lighter:                #9b9b9b;
+@gray-lightly:                #acacac;
+@gray-lightest:               #e6e6e6;
+
+@color-main:                  #0275d8;
+@color-highlight:             #45ae00;
+@color-danger:                #ff4b04;
+
+
+
+// Семантические цвета
+
+@text-color:                  @gray;
+@body-bg:                     #fff;
+
+@link-color:                  @color-highlight;
+@link-color--hover:           darken(@color-highlight, 5%);
+
+@border-color:                @gray-light;
+
+
+
+// Базовая типографика (<=479: 1 rem = 8px, >=480: 1rem = 10px)
+// Для лёгкого пересчёта: http://pxtoem.com/
+
+@font-size:                   14px;
+@font-size--h1:               2.25em;  // 3.6rem;
+@font-size--h2:               1.875em; // 3rem;
+@font-size--h3:               1.5em;   // 2.4rem;
+@font-size--h4:               1.25em;  // 2.0rem;
+@font-size--h5:               1em;     // 1.6rem
+@font-size--h6:               1em;     // 1.6rem
+@font-size--small:            0.75em;
+@font-size--small-percent:    75%;
+
+@line-height:                 21px;
+
+@font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+@font-family--serif:          Georgia, 'Times New Roman', Times, serif;
+@font-family--monospace:      Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+@font-family--headings:       @font-family;
+
+
+
+// Модульная сетка
+
+@grid-columns:                12;
+@grid-gutter-width:           30px;
+
+
+
+// Ширины
+
+@screen-xs:                   1140px;
+
+
+
+// Z-index
+
+@z-index-dropdown:            10;
+
+
+
+// Формы, кнопки
+
+@field-padding-top:           0.313em;
+@field-padding-bottom:        0.313em;
+@field-padding-horizontal:    0.438em;
+
+
+
+// Разное
+
+@border-radius:               0.3rem;
+@opacity:                     0.7;
+@transition-time:             0.3s;
+@shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);

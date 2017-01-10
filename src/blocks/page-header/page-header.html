@@ -1,0 +1,22 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+<header class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="logo col col-2">
+        <svg width="153" height="49"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg>
+      </div>
+
+        @@include('../../blocks/navbar/navbar.html')
+        <div class="header-phone">
+      <div class="header-phone_comment">Есть вопросы?</div>
+      <div class="header-phone_number">8 (800) 333 45-67</div>
+        </div>
+    </div>
+</div>
+</header>

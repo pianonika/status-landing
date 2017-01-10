@@ -1,0 +1,59 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-footer/page-footer.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  flex-shrink: 0;
+  background: @gray;
+  color: @gray-lightly;
+  padding: 53px 0;
+
+  &_inner {
+    justify-content: flex-start;;
+    align-items: center;
+  }
+
+}
+
+.copiright {
+  font: normal 14px/23px 'helveticaneuecyrroman', Helvetica;
+  color: @gray-lightly;
+
+  &:before {
+    content: '';
+    display: flex;
+    position: relative;
+    width: 8%;
+    float: left;
+    height: 67px;
+    border-left: 1px solid #acacac;
+  }
+}
+
+.made-in-morizo {
+  color:@gray-lightly;
+  font: normal 12px/25px 'helveticaneuecyrroman', Helvetica;
+  float: right;
+  padding-left: 25px;
+  background: url('/img/morizo-logo.png') 0 0  no-repeat;
+  margin-left: auto;
+
+  &_link {
+    color:@gray-lightly;
+    text-decoration: underline;
+
+    &:hover {
+        color:@gray-lightly;
+    }
+  }
+
+}

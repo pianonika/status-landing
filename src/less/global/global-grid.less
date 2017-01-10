@@ -1,0 +1,49 @@
+@import './src/less/variables.less';     // только для удобства обращения к переменным
+
+
+
+.container {
+  width: 1170px;
+  padding: 0 1%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+
+    &--centred {
+      justify-content:center;
+    }
+ }
+
+
+
+.row--header {
+  padding: 96px 0 76px;
+}
+
+.col {padding: 0 2%; margin: 0 0 0 -2%;}
+.col-12 { width: 100%; }
+.col-11 { width: 87.67%; }
+.col-10 { width: 81.33%; }
+.col-9 { width: 73%; }
+.col-8 { width: 64.67%; }
+.col-7 { width: 56.33%; }
+.col-6 { width: 48%; }
+.col-5 { width: 39.67%; }
+.col-4 { width: 31.33%; }
+.col-3 { width: 23%; }
+.col-2 { width: 14.67%; }
+.col-1 { width: 6.33%; }
+
+
+
+//
+//
+//
+// // Классы модульной сетки для XS — срабатывают на всех ширинах
+// .make-column-list-general-rules(xs); // список всех селекторов .col-xs-... и их обще свойства
+// .make-columns(@grid-columns, xs);    // ширины для каждого селектора .col-xs-... отдельно
+// .make-offsets(@grid-columns, xs);    // левые отступы для каждого селектора .col-xs-offset-...
