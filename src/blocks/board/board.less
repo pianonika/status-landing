@@ -1,0 +1,21 @@
+.board {
+  display: flex;
+  align-items: stretch;
+
+  &_inner {
+    padding: 45px;
+    background: #fff;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.09);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &_header {
+    font: lighter 30px/34px  'helveticaneuecyr', Helvetica;
+    margin-bottom: 12px;
+
+    &:not(:first-of-type) {
+      margin-top: 12px;
+    }
+  }
+}

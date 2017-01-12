@@ -9,20 +9,19 @@
 }
 
 .icon-item {
-  width: 33%;
   display: flex;
   align-items: stretch;
-  &_inner{
-    position: relative;
-  }
 
-  &--bordered:not(:nth-child(3n)) {
-    border-right: 1px solid @gray-lightest;
-    margin-right: -2px;
-  }
+  &--bordered {
+    width: 33%;
 
-  &_inner--bordered {
-    border-top: 1px solid @gray-lightest;
+    &:not(:nth-child(3n)) {
+      border-right: 1px solid @gray-lightest;
+      margin-right: -2px;
+    }
+    &:not(:nth-child(3n+1)) &_text {
+      padding-left: 43px;
+    }
   }
 
   &--bordered:nth-child(1) &_inner,
@@ -31,9 +30,24 @@
     border-top: none;
   }
 
-  &_inner:not(:nth-child(3n+1)){
-
+  &--left-pic {
+    & .icon-item_text {
+      padding: 0 0 0 138px;
     }
+    & .icon-item_img {
+      left: 40px;
+    }
+  }
+
+  &_inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+
+    &--bordered {
+      border-top: 1px solid @gray-lightest;
+    }
+  }
 
   &_header {
     font-family: 'helveticaneuecyrroman', Helvetica;
@@ -49,43 +63,26 @@
   }
 
   &_text {
-    padding:86px 6.33% 0 0;
+    padding:86px 6.33% 0 11%;
 
     &--widespace {
-      padding: 140px 6.33% 75px 0;
+      padding: 140px 6.33% 75px 42px;
     }
-
-    &--left-pic {
-        padding: 0 6.33% 0 86px;
-    }
-  }
-
-  &:not(:nth-child(3n+1)) &_text {
-    padding-left: 43px;
   }
 
   &_img {
     position: absolute;
+    left:11%;
+    fill: @color-highlight;
+
     &--widespace {
       top: 55px;
     }
+
+    &--highlight {
+      fill: #007700;
+    }
+
   }
 
-
-  &:not(:nth-child(3n+1)) &_img {
-    left: 43px;
-  }
 }
-
-
-  #case {
-    fill: @color-highlight;
-  }
-
-  #shield {
-    fill: #fff;
-  }
-
-  #key {
-      fill: @color-highlight;
-  }

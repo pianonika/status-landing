@@ -1,0 +1,97 @@
+.logos-slider .owl-carousel .owl-item img {
+  width: initial;
+  margin: 0 auto;
+}
+
+.logos-slider .owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  display: flex;
+  align-items: center;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  width: 100%;
+}
+
+.logos-slider .owl-carousel .owl-carousel .owl-stage-outer {
+  position: relative;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  width: 10px;
+  height: 20px;
+  position: absolute;
+}
+.owl-carousel .owl-nav .owl-prev {
+  left: -20px;
+}
+.owl-carousel .owl-nav .owl-next {
+  right: -20px;
+}
+
+.logos-slider .owl-carousel .owl-nav .owl-prev:before,
+.logos-slider .owl-carousel .owl-nav .owl-prev:after,
+.logos-slider .owl-carousel .owl-nav .owl-next:before,
+.logos-slider .owl-carousel .owl-nav .owl-next:after  {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 14px;
+  background: @gray-lighter;
+  position: absolute;
+}
+
+.logos-slider .owl-carousel .owl-nav .owl-prev:before {
+  transform: rotate(45deg);
+  bottom: 8px;
+  left: 4px;
+}
+
+.logos-slider .owl-carousel .owl-nav .owl-prev:after {
+  transform: rotate(-45deg);
+  top: 8px;
+  left: 4px;
+}
+
+
+.logos-slider .owl-carousel .owl-nav .owl-next:after {
+  transform: rotate(45deg);
+  top: 8px;
+  left: 4px;
+}
+
+.logos-slider .owl-carousel .owl-nav .owl-next:before {
+  transform: rotate(-45deg);
+  bottom: 8px;
+  left: 4px;
+}
+
+.logos-slider .owl-carousel .owl-stage-outer:before,
+.logos-slider .owl-carousel .owl-stage-outer:after {
+  content: '';
+  width: 20px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.logos-slider .owl-carousel .owl-stage-outer:before {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%,rgba(9, 28, 43, 0) 100%);
+}
+
+.logos-slider .owl-carousel .owl-stage-outer:after {
+  right: 0;
+  background: linear-gradient(to left, rgb(255, 255, 255) 0%,rgba(9, 28, 43, 0) 100%);
+}
+
+.logos-slider--static .owl-carousel {
+  display: flex;
+  justify-content:space-between;
+}

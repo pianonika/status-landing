@@ -294,7 +294,10 @@ gulp.task('serve', gulp.series('build', function() {
     dirs.source + '/_include/*.html',
     dirs.source + '/blocks/**/*.html',
   ], gulp.series('html', reloader));
-  gulp.watch(blocks.less, gulp.series('less'));
+  gulp.watch([
+    './src/blocks/**/*.less',
+    './src/less/**/*.less'
+  ], gulp.series('less'));
   gulp.watch('src/docs-files/docs.less', gulp.series('less:docs'));
   if(blocks.img) {
     gulp.watch(blocks.img, gulp.series('img', reloader));
@@ -390,20 +393,20 @@ function getComponentsFiles() {
   }
 
   // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
-  // if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
-  //   сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
-  // }
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
+     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
+   }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
-  // if(fileExistAndHasContent(dirs.source + '/js/file_name.js')) {
-  //   сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
-  //   или
-  //   сomponentsFilesList.js.push(dirs.source + '/js/file_name.js'); // добавляем в конец
-  // }
+  if(fileExistAndHasContent(dirs.source + '/js/owl.carousel.js')) {
+    //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
+    //или
+    сomponentsFilesList.js.push(dirs.source + '/js/owl.carousel.js'); // добавляем в конец
+  }
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
-  if(fileExistAndHasContent(dirs.source + '/css/global-css.css')) {
-    сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/global-css.css');
+  if(fileExistAndHasContent(dirs.source + '/js/global-css.css')) {
+    сomponentsFilesList.additionalCss.unshift(dirs.source + '/js/global-css.css');
   }
 
   // Если хочется иметь в папке сборки какие-то еще отдельные CSS-файлы, пишите их здесь
