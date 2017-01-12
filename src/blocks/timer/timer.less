@@ -1,0 +1,52 @@
+.timer {
+  display: flex;
+
+  &_header {
+    font: bold 14px/27px 'helveticaneuecyr', Helvetica;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  &_item {
+    width: 92px;
+    height: 116px;
+    position: relative;
+    border-top: 2px solid #ff9104;
+    border-left: 2px solid #ff9104;
+    border-right: 2px solid #ff9104;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-right: 17px;
+  }
+
+  &_num {
+    font: normal 48px/57px  'helveticaneuecyrthin', Helvetica;
+    color: #fff;
+  }
+
+  &_data-format {
+    position: absolute;
+    bottom: -6px;
+    width: 92px;
+    text-align: center;
+    text-transform: capitalize;
+    font: normal 14px/16px  'helveticaneuecyrroman', Helvetica;
+
+     &:before,
+     &:after {
+       content: '';
+       width: 22px;
+       height: 2px;
+       position: absolute;
+       background: #ff9104;
+     }
+    &:before {
+     left: -1px;
+     top: 8px;
+   }
+    &:after {
+     right: -1px;
+     top: 8px;
+   }
+  }
+}

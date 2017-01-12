@@ -1,0 +1,76 @@
+.form {
+  padding: 0 46px;
+
+  &_row {
+    margin-bottom: 30px;
+  }
+
+  &_field-header {
+    font: bold 14px/17px  'helveticaneuecyr', Helvetica;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  &_inp-text {
+    margin: 0;
+    padding: 12px 11px 10px;
+    outline: none;
+    border: 1px solid @gray-lightest;
+    font: normal 14px/16px Arial;
+    color: @gray-lighter;
+    box-shadow: inset 3px 3px 8px 0px rgba(0, 0, 0, 0.03);
+
+    &--fieldset {
+      width: 226px;
+      box-sizing: border-box;
+
+      &:nth-child(2n+1) {
+          margin-right: 16px;
+      }
+    }
+
+    &--full-width {
+      width: 100%;
+    }
+  }
+
+  &_textarea{
+    height: 106px;
+    max-height: 300px;
+    width: 470px;
+    max-width: 470px;
+    margin: 0px;
+    box-shadow: inset 3px 3px 8px 0px rgba(0, 0, 0, 0.03);
+  }
+
+  &_separator {
+    height: 1px;
+    background:  @gray-lightest;
+    margin: 8px 0;
+  }
+
+  &_group-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &--col {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    &--col-2 label {
+      width: 50%;
+    }
+  }
+}
+
+  .required:after {
+    content: '*';
+    color: @color-highlight;
+    margin-left: 3px;
+  }
+
+.form * {
+  box-sizing: border-box;
+}
