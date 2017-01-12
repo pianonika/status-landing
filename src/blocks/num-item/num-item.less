@@ -1,0 +1,37 @@
+.num-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &--centred{
+    justify-content:center;
+  }
+}
+
+.num-item {
+  display: flex;
+  align-items: stretch;
+
+  &_inner{
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+
+  &_comment {
+    font: normal 14px/21px 'helveticaneuecyrroman', Helvetica;
+  }
+
+  &_text {
+    padding: 0 6.33% 0 11%;
+    width: 100%;
+  }
+
+  &_number {
+    position: absolute;
+    width: 8%;
+    padding-right: 3%;
+    text-align: right;
+    color: @color-highlight;
+  }
+}

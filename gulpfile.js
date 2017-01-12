@@ -294,7 +294,10 @@ gulp.task('serve', gulp.series('build', function() {
     dirs.source + '/_include/*.html',
     dirs.source + '/blocks/**/*.html',
   ], gulp.series('html', reloader));
-  gulp.watch(blocks.less, gulp.series('less'));
+  gulp.watch([
+    './src/blocks/**/*.less',
+    './src/less/**/*.less'
+  ], gulp.series('less'));
   gulp.watch('src/docs-files/docs.less', gulp.series('less:docs'));
   if(blocks.img) {
     gulp.watch(blocks.img, gulp.series('img', reloader));
