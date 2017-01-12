@@ -17,7 +17,7 @@
       <section class="section section--tall">
         <div class="container">
           <header class="row row--centred">
-            <div class="section_header-wrapper section_header-wrapper--centred col col-12">
+            <div class="section_header-wrapper section_header-wrapper--centred">
               <h1 class="section_header section_header--centred col col-12">Возможности и преимущества</h1>
             </div>
           </header>
@@ -133,7 +133,7 @@
       <section class="section section--bright section--litle">
         <div class="container">
           <div class="row row--centred">
-            <header class="section_header-wrapper section_header-wrapper--centred col col-12">
+            <header class="section_header-wrapper section_header-wrapper--centred  section_header-wrapper--commented">
               <h1 class="section_header section_header--light header--centred">Безопасность</h1>
               <p class="header-comment">Мы заботимся о безопасности ваших данных</p>
             </header>
@@ -202,7 +202,7 @@
       <section class="section section--tall">
         <div class="container">
           <header class="row row--centred">
-            <div class="section_header-wrapper section_header-wrapper--centred col col-12">
+            <div class="section_header-wrapper section_header-wrapper--centred">
               <h1 class="section_header section_header--centred col col-12">Как подключиться</h1>
             </div>
           </header>
@@ -262,29 +262,123 @@
       <section class="section section--netral">
         <div class="container">
           <header class="row row--centred">
-            <div class="section_header-wrapper section_header-wrapper--centred col col-12">
+            <div class="section_header-wrapper section_header-wrapper--centred">
               <h1 class="section_header section_header--centred col col-12">Тарифы</h1>
             </div>
           </header>
         </div>
         <div class="container">
           <div class="row">
-            <div class="bord col col-6">
-              <div class="bord_header">Условия при наличии договора<br>c эмитентом</div>
-              <div class="bord_content">
-                <p>Сервис предоставляется бесплатно <a href="/">при наличии договора с эмитентом</a>.</p>
-                <div class="commented-text">
-                  <div class="commented-text_main">0<span class="rouble"> P</span></div>
-                  <div class="commented-text_comment">бесплатно</div>
+            <div class="board col col-6">
+              <div class="board_inner">
+                <h2 class="board_header">Условия при наличии договора<br>c эмитентом</h2>
+                <div class="board_content">
+                  <p>Сервис предоставляется бесплатно <a href="/">при наличии договора с эмитентом</a>.</p>
+                  <div class="price">
+                    <div class="price_cost">0 <span class="rouble">у</span></div>
+                    <div class="price_comment">Бесплатно</div>
+                  </div>
+                  <div class="logos-slider">
+                    <div class="owl-carousel">
+                      <div class="logos-slider_item"><img src="/img/slaider-sber.jpg" alt="slaider-biline.jpg"></div>
+                      <div class="logos-slider_item"><img src="/img/slaider-biline.jpg" alt="slaider-biline.jpg"></div>
+                      <div class="logos-slider_item"><img src="/img/slaider-rzd.jpg" alt="slaider-rzd.jpg"></div>
+                      <div class="logos-slider_item"><img src="/img/slaider-mk.jpg" alt="slaider-mk.jpg"></div>
+                      <div class="logos-slider_item"><img src="/img/slaider-mk.jpg" alt="slaider-mk.jpg"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="logos-slider">
-                  
+              </div>
+            </div>
+            <div class="board col col-6">
+              <div class="board_inner">
+                <h2 class="board_header">Условия при прямом <br>подключении</h2>
+                <div class="board_content">
+                  <p>Стоимость подключения (при прямом подключении), без ограничения количества ЛС.</p>
+                  <div class="price">
+                    <div class="price_cost">1 000 <span class="rouble">у</span></div>
+                    <div class="price_comment">Единоразово</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="section section--tall">
+        <div class="container">
+          <header class="row row--centred">
+            <div class="section_header-wrapper section_header-wrapper--centred">
+              <h1 class="section_header section_header--centred col col-12">Есть вопросы – напишите нам!</h1>
+            </div>
+          </header>
+        </div>
+        <div class="container">
+          <div class="row">
+              <div class="col col-6">
+                <form action="/">
+                  <div class="form_row">
+                    <fieldset class="form_goup">
+                      <legend>Ваше имя</legend>
+                      <input type="text" id="second-name" placeholder="Фамилия">
+                      <input type="text" id="first-name" placeholder="Имя">
+                    </fieldset>
+                  </div>
+                  <div class="form-row">
+                    <label for="email">Электронная почта</label>
+                    <input type="text" name="email" placeholder="123@mail.ru">
+                  </div>
+                  <div class="form_row">
+                    <fieldset class="form_goup">
+                      <legend>Вы акционер</legend>
+                      <label for=""><input type="checkbox" value="Сбербанк">Сбербанк</label>
+                      <label for=""><input type="checkbox" value="ММК">ММК</label>
+                      <label for=""><input type="checkbox" value="Сбербанк">Сбербанк</label>
+                      <label for=""><input type="checkbox" value="ММК">ММК</label>
+                      <label for=""><input type="checkbox" value="Сбербанк">Сбербанк</label>
+                      <div class="fieldset">
+                        <label for=""><input type="checkbox" value="ММК">ММК</label>
+                        <input type="text" name="another-emitent" placeholder="Другие эмитенты">
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="form_row">
+                    <label for="massage">Ваш запрос</label>
+                    <textarea name="name" rows="8" cols="80"></textarea>
+                  </div>
+                  <div class="form_row">
+                    <fieldset class="form_goup">
+                      <legend>Какие функции сервиса Вам интересны</legend>
+                      <label for=""><input type="checkbox" value="1">Информация о лицевых счетах, количестве акций и стоимости портфеля</label>
+                      <label for=""><input type="checkbox" value="2">Журнал операций</label>
+                      <label for=""><input type="checkbox" value="3">Голосование на собраниях акционеров</label>
+                      <label for=""><input type="checkbox" value="4">Начисленные и выплаченные дивиденды</label>
+                      <label for=""><input type="checkbox" value="5">Консультации</label>
+                      <label for=""><input type="checkbox" value="6">Получение выписок и справок из реестра</label>
+                      <label for=""><input type="checkbox" value="7">Проведение операций в дистанционном режиме</label>
+                    </fieldset>
+                  </div>
+                  <div class="form_separator">---------------</div>
+                  <div class="form_row">
+                    Настоящим подтверждаю свое соглаие на использование персональных данных
+                  </div>
+                  <div class="form_row">
+                    <label for=""><input type="checkbox" value="ММК">Введите код с картинки</label>
+                    <input type="text" name="another-emitent" placeholder="Другие эмитенты">
+                    <div class="form_field-comment">Введите код с картинки</div>
+                  </div>
+                  <p><sup>*</sup> —  введите код с картинки</p>
+                </form>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+
+
+
 
     </div>
 
