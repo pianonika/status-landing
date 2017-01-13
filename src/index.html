@@ -335,15 +335,33 @@
                     <fieldset class="form_goup">
                       <legend class="form_field-header required">Вы акционер</legend>
                       <div class="form_group-inner form_group-inner--col-2">
-                        <label for=""><input type="checkbox" value="Сбербанк">Сбербанк</label>
-                        <label for=""><input type="checkbox" value="ММК">ФСК ЕЭС</label>
-                        <label for=""><input type="checkbox" value="Сбербанк">ММК</label>
-                        <label for=""><input type="checkbox" value="ММК">Россети</label>
-                        <label for=""><input type="checkbox" value="Сбербанк">МРСК Центра и Приволжья</label>
+                        <div class="checkbox form_field">
+                          <input type="checkbox" value="Сбербанк" id="company_1" class="checkbox_input" checked>
+                          <label for="company_1" class="checkbox_label" checked>Сбербанк</label>
+                        </div>
+                        <div class="checkbox form_field">
+                          <input type="checkbox" value="ММК" class="checkbox_input"  id="company_2">
+                          <label for="company_2" class="checkbox_label">ФСК ЕЭС</label>
+                        </div>
+                        <div class="checkbox form_field">
+                          <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="company_3">
+                          <label for="company_3" class="checkbox_label">ММК</label>
+                        </div>
+                        <div class="checkbox form_field">
+                          <input type="checkbox" value="ММК" class="checkbox_input"  id="company_4">
+                          <label for="company_4" class="checkbox_label">Россети</label>
+                        </div>
+                        <div class="checkbox form_field">
+                          <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="company_5">
+                          <label for="company_5" class="checkbox_label">МРСК Центра и Приволжья</label>
+                        </div>
                       </div>
-                      <div class="fieldset">
-                        <label for=""><input type="checkbox" value="ММК">Другое</label>
-                        <input  class="form_inp-text" type="text" name="another-emitent" placeholder="Другие эмитенты">
+                      <div class="form_additional-field">
+                        <div class="checkbox form_field">
+                          <input type="checkbox" value="ММК" class="checkbox_input" id="company_6">
+                          <label for="company_6" class="checkbox_label">Другое</label>
+                        </div>
+                        <input  class="form_inp-text form_inp-text--additional" type="text" name="another-emitent" placeholder="Другие эмитенты">
                       </div>
                     </fieldset>
                   </div>
@@ -355,25 +373,53 @@
                     <fieldset class="form_goup">
                         <legend  class="form_field-header"  class="form_field-header">Какие функции сервиса Вам интересны</legend>
                         <div class="form_group-inner form_group-inner--col">
-                          <label for=""><input type="checkbox" value="1">Информация о лицевых счетах, количестве акций и стоимости портфеля</label>
-                          <label for=""><input type="checkbox" value="2">Журнал операций</label>
-                          <label for=""><input type="checkbox" value="3">Голосование на собраниях акционеров</label>
-                          <label for=""><input type="checkbox" value="4">Начисленные и выплаченные дивиденды</label>
-                          <label for=""><input type="checkbox" value="5">Консультации</label>
-                          <label for=""><input type="checkbox" value="6">Получение выписок и справок из реестра</label>
-                          <label for=""><input type="checkbox" value="7">Проведение операций в дистанционном режиме</label>
+                          <div class="checkbox form_field">
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input" checked id="check1">
+                            <label for="check1" class="checkbox_label">Информация о лицевых счетах, количестве акций и стоимости портфеля</label>
+                          </div>
+                          <div class="checkbox form_field">
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input" id="check2">
+                            <label for="check2" class="checkbox_label">Журнал операций</label>
+                          </div>
+                          <div class="checkbox form_field">
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check3">
+                            <label for="check3" class="checkbox_label">Голосование на собраниях акционеров</label>
+                          </div>
+                          <div class="checkbox form_field">
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check4">
+                            <label for="check4" class="checkbox_label">Начисленные и выплаченные дивиденды</label>
+                          </div>
+                          <div class="checkbox form_field">
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check5">
+                            <label for="check5" class="checkbox_label">Консультации</label>
+                          </div>
+                          <div class="checkbox form_field">
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check6">
+                            <label for="check6" class="checkbox_label">Получение выписок и справок из реестра</label>
+                          </div>
+                          <div class="checkbox form_field">
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check7">
+                            <label for="check7" class="checkbox_label">Проведение операций в дистанционном режиме</label>
+                          </div>
                         </div>
                     </fieldset>
                   </div>
                   <div class="form_separator"></div>
-                  <div class="form_row required">
-                    <label for=""><input type="checkbox" value="yes">Настоящим подтверждаю свое соглаие на использование персональных данных</label>
-
+                  <div class="form_row">
+                    <div class="checkbox form_field">
+                      <input type="checkbox" value="Сбербанк" class="checkbox_input" id="confirm">
+                      <label for="confirm" class="checkbox_label" value="yes">Настоящим подтверждаю свое соглаие на использование персональных данных <sup class="required"></sup></label>
+                    </div>
                   </div>
                   <div class="form_row">
-                    <label class="form_field-header required" for="">Введите код с картинки</label>
-                    <input class="form_inp-text" type="text" name="another-emitent" placeholder="Другие эмитенты">
-                    <div class="form_field-comment">Введите код с картинки</div>
+                    <div class="captcha">
+                      <label class="form_field-header required" for="">Введите код с картинки</label>
+                      <div class="form_group-inner form_group-inner--col-2">
+                        <input class="form_inp-text" type="text" name="another-emitent" placeholder="Другие эмитенты">
+                        <div class="captcha_pic"><img src="/img/captcha.jpg" alt=""></div>
+                      </div>
+                      <div class="form_field-comment captcha_refresh">Получить новый код</div>
+                    </div>
                   </div>
                   <p><sup class="required"></sup> —  введите код с картинки</p>
                 </form>

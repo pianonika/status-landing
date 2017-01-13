@@ -1,13 +1,15 @@
 .key-promo {
-  height: 200px;
   border-top: 1px solid @gray-lightest;
   background: url('/img/key-promo-background.jpg') 0 0 no-repeat;
   background-size: cover;
   height: 641px;
   color: #fff;
+  position: relative;
 
   &_content {
     margin-top: 112px;
+    z-index: 10;
+    position: absolute;
   }
 
   &_text {
@@ -15,26 +17,21 @@
     margin: 22px 0 30px;
   }
 
-}
-
-.counter_header {
-  font: bold 14px/27px 'helveticaneuecyr', Helveica;
-  text-transform: uppercase;
-
-  &_clockface {
-    margin-top: 25px;
+  &_video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
-}
 
-.clockface {
-  display: flex;
-
-  &_item {
-    border: 2px solid #ff9104;
-    border-bottom: none;
-    height: 116px;
-    width: 96px;
-    margin-right: 17px;
-    font: normal 48px/87px 'helveticaneuecyrthin', Helveica;
+  &_video {
+    top: 50%;
+    left: 50%;
+    min-width: 1170px;
+    width:100%; 
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
   }
 }

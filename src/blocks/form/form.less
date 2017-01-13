@@ -1,5 +1,6 @@
 .form {
   padding: 0 46px;
+  font: normal 14px/17px  'helveticaneuecyr', Helvetica;
 
   &_row {
     margin-bottom: 30px;
@@ -7,16 +8,16 @@
 
   &_field-header {
     font: bold 14px/17px  'helveticaneuecyr', Helvetica;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     display: block;
   }
 
   &_inp-text {
     margin: 0;
-    padding: 12px 11px 10px;
+    padding: 11px 11px;
     outline: none;
     border: 1px solid @gray-lightest;
-    font: normal 14px/16px Arial;
+    font: normal 14px/16px 'helveticaneuecyrroman', Helvetica;
     color: @gray-lighter;
     box-shadow: inset 3px 3px 8px 0px rgba(0, 0, 0, 0.03);
 
@@ -32,6 +33,11 @@
     &--full-width {
       width: 100%;
     }
+
+    &--additional {
+      margin-left: 45px;
+      flex-grow: 1;
+    }
   }
 
   &_textarea{
@@ -41,12 +47,14 @@
     max-width: 470px;
     margin: 0px;
     box-shadow: inset 3px 3px 8px 0px rgba(0, 0, 0, 0.03);
+    border: 1px solid @gray-lightest;
+    padding: 11px 11px;
   }
 
   &_separator {
     height: 1px;
     background:  @gray-lightest;
-    margin: 8px 0;
+    margin: 8px 0 35px 0;
   }
 
   &_group-inner {
@@ -59,9 +67,28 @@
       flex-wrap: nowrap;
     }
 
-    &--col-2 label {
+    &--col-2  .form_field {
       width: 50%;
     }
+  }
+
+  &_additional-field {
+    display: flex;
+    align-items: center;
+  }
+
+
+}
+
+.captcha {
+  &_refresh {
+    color: @color-highlight;
+    margin-top: 26px;
+    cursor: pointer;
+  }
+
+  &_pic {
+    margin-left: 45px;
   }
 }
 
@@ -69,6 +96,7 @@
     content: '*';
     color: @color-highlight;
     margin-left: 3px;
+    font: normal 14px/25px 'helveticaneuecyrroman', Helvetica;
   }
 
 .form * {
