@@ -392,16 +392,23 @@ function getComponentsFiles() {
     сomponentsFilesList.js.unshift(dirs.source + '/js/global-script.js');
   }
 
-  // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
-  if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
-     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
-   }
-
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
   if(fileExistAndHasContent(dirs.source + '/js/owl.carousel.js')) {
     //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
     //или
-    сomponentsFilesList.js.push(dirs.source + '/js/owl.carousel.js'); // добавляем в конец
+    сomponentsFilesList.js.unshift(dirs.source + '/js/owl.carousel.js'); // добавляем в конец
+  }
+
+ // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
+ if(fileExistAndHasContent(dirs.source + '/js/jquery.validate.js')) {
+   //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
+   //или
+   сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.validate.js'); // добавляем в конец
+ }
+
+ // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
+ if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
   }
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами

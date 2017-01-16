@@ -317,12 +317,12 @@
         <div class="container">
           <div class="row">
               <div class="col col-6 col-central">
-                <form action="/" class="form">
+                <form action="/" class="form" id="shareholders">
                   <div class="form_row">
                     <fieldset class="form_goup">
                       <legend class="form_field-header required">Как вас зовут</legend>
                       <div class="form_group-inner">
-                        <input  class="form_inp-text form_inp-text--fieldset" type="text" id="second-name" placeholder="Фамилия">
+                        <input  class="form_inp-text form_inp-text--fieldset" type="text" id="secondName" placeholder="Фамилия">
                         <input  class="form_inp-text form_inp-text--fieldset" type="text" id="first-name" placeholder="Имя">
                       </div>
                     </fieldset>
@@ -415,13 +415,16 @@
                     <div class="captcha">
                       <label class="form_field-header required" for="">Введите код с картинки</label>
                       <div class="form_group-inner form_group-inner--col-2">
-                        <input class="form_inp-text" type="text" name="another-emitent" placeholder="Другие эмитенты">
+                        <input class="form_inp-text" type="text" name="another-emitent">
                         <div class="captcha_pic"><img src="/img/captcha.jpg" alt=""></div>
                       </div>
                       <div class="form_field-comment captcha_refresh">Получить новый код</div>
                     </div>
                   </div>
                   <p><sup class="required"></sup> —  введите код с картинки</p>
+                  <div class="form_row">
+                    <button type="submit">Отправить</button>
+                  </div>
                 </form>
               </div>
           </div>
