@@ -3286,4 +3286,13 @@ $(function () {
 	} else {
 		$('.logos-slider').addClass('logos-slider--static');
 	}
+
+	$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    nav: true,
+			navText:[ , ],
+	    items:1,
+			dots: true
+	})
 });

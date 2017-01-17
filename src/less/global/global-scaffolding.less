@@ -75,10 +75,10 @@ textarea {
 
 body {
   font-family: @font-family;
-   font-size: @font-size;
-   line-height: @line-height;
-   color: @gray;
-   background-color: @body-bg;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @gray;
+  background-color: @body-bg;
 }
 
 a {
@@ -102,12 +102,14 @@ img {
 h1 {
   font: lighter 30px/36px'helveticaneuecyr', Helvetica;
   color: @gray;
+  margin: 45px 0 20px 0;
 }
 
 
 h2 {
-  font: lighter 20px/24px'helveticaneuecyr', Helvetica;
+  font: normal 20px/24px 'helveticaneuecyrroman', Helvetica;
   color: @gray;
+  margin: 30px 0 20px;
 }
 
 
@@ -116,9 +118,9 @@ h2 {
 //  Типографика
 //------------------------------------------------------------------------------
 
-// .h1,
+
 // h1 {
-//   font-size: @font-size--h1;
+//   font: normal 30px/36px ;
 // }
 //
 // // .h2,
@@ -194,30 +196,66 @@ pre,
 address,
 figure,
 table {
-  margin-top: (@line-height / 2); //11.5px
-  margin-bottom: (@line-height / 2);
+  margin: 20px 0;
+  font: normal 14px/21px 'helveticaneuecyrroman', Helvetica;
 }
+
+p ~ ul,
+p ~ ol,
+p + ul,
+p + ol {
+  margin-bottom: 0;
+}
+
+b,
+strong {
+  font: bold 14px/21px 'helveticaneuecyr', Helvetica;
+}
+
 //
 // address {
 //   font-style: normal;
 // }
 //
-// ul,
-// ol {
-//   padding-left: 1.8em;
-// }
-//
-// ol ol,
-// ul ul,
-// ol ul,
-// ul ol {
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
-//
-// li {
-//   line-height: @line-height;
-// }
+.content ul,
+.content ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+
+  & li {
+    font: normal 14px/21px 'helveticaneuecyrroman', Helvetica;
+    padding:  0 0 8px 23px;
+    margin-top: 8px;
+  }
+}
+
+.content ol ol,
+.content ul ul,
+.content ol ul,
+.content ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 23px;
+}
+
+.content ol li {
+  background: url(../img/check-mark.png) 0 3px no-repeat;
+}
+
+.content ul li {
+  counter-increment: list;
+  position: relative;
+
+  &:before {
+    content: counter(list) ". ";
+    color: @color-highlight;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 //
 // dt {
 //   font-weight: 700;
@@ -254,11 +292,7 @@ table {
 //   padding: 0.1em 0.3em;
 // }
 //
-// b,
-// strong {
-//   font-weight: bolder;
-// }
-//
+
 // abbr[title] {
 //   border-bottom: 1px dotted;
 // }

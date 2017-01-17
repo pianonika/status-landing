@@ -1,0 +1,121 @@
+.content-slider {
+  margin: 50px 0;
+  font: 14px/21px helveticaneuecyrroman, Helvetica;
+
+  &_item {
+    width: 648px;
+  }
+
+  &_text {
+    color: @gray-lightly;
+    margin: 23px 0 5px;
+  }
+}
+
+
+
+.content-slider .owl-carousel {
+  // width: 648px;
+  // padding:
+  margin-left: -15px;
+}
+
+.content-slider .owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+}
+
+.content-slider .owl-carousel .owl-item img {
+  width: initial;
+  margin: 0 auto;
+}
+
+.content-slider .owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  display: flex;
+  align-items: center;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  width: 100%;
+}
+
+.content-slider .owl-carousel .owl-carousel .owl-stage-outer {
+  position: relative;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  width: 10px;
+  height: 20px;
+  position: absolute;
+}
+.owl-carousel .owl-nav .owl-prev {
+  left: 15px;
+}
+.owl-carousel .owl-nav .owl-next {
+  right: 15px;
+}
+
+.content-slider .owl-carousel .owl-nav .owl-prev:before,
+.content-slider .owl-carousel .owl-nav .owl-prev:after,
+.content-slider .owl-carousel .owl-nav .owl-next:before,
+.content-slider .owl-carousel .owl-nav .owl-next:after  {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 14px;
+  background: @gray-lighter;
+  position: absolute;
+}
+
+.content-slider .owl-carousel .owl-nav .owl-prev:before {
+  transform: rotate(45deg);
+  bottom: 8px;
+  left: 4px;
+}
+
+.content-slider .owl-carousel .owl-nav .owl-prev:after {
+  transform: rotate(-45deg);
+  top: 8px;
+  left: 4px;
+}
+
+
+.content-slider .owl-carousel .owl-nav .owl-next:after {
+  transform: rotate(45deg);
+  top: 8px;
+  left: 4px;
+}
+
+.content-slider .owl-carousel .owl-nav .owl-next:before {
+  transform: rotate(-45deg);
+  bottom: 8px;
+  left: 4px;
+}
+
+.content-slider--static .owl-carousel {
+  display: flex;
+  justify-content:space-between;
+}
+
+.owl-dots {
+  display: flex;
+  margin: 13px 53px;
+}
+
+.owl-carousel .owl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: @gray-lightly;
+  margin-right: 10px;
+
+  &.active {
+    background: @color-highlight;
+  }
+}

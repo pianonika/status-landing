@@ -1,0 +1,29 @@
+table {
+  font: normal 14px/21px 'helveticaneuecyr', Helvetica;
+  width: 100%;
+  margin-left: -15px;
+  border-bottom: 1px solid  @gray-lightest;
+
+  & thead {
+    border-bottom: 1px solid @gray-lightest;
+
+    & th,
+    & td {
+      font: bold 14px/21px 'helveticaneuecyrroman', Helvetica;
+      text-transform: uppercase;
+    }
+  }
+
+  & th,
+  & td {
+    text-align: left;
+    padding: 15px 21px;
+  }
+
+  tbody {
+
+    & tr:nth-child(2n) {
+      background:  @gray-lightest;
+    }
+  }
+}
