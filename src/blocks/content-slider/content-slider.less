@@ -105,7 +105,9 @@
 
 .owl-dots {
   display: flex;
-  margin: 13px 53px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 53px;
 }
 
 .owl-carousel .owl-dot {
@@ -113,7 +115,7 @@
   height: 14px;
   border-radius: 50%;
   background: @gray-lightly;
-  margin-right: 10px;
+  margin: 13px 10px 0 0;
 
   &.active {
     background: @color-highlight;

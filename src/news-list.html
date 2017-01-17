@@ -11,10 +11,42 @@
   <body class="page">
     @@include('blocks/sprite-svg--localstorage/img/sprite-svg--ls.svg')
     <div class="page-wrapper">
-      @@include('blocks/page-header/page-header.html')
+    @@include('blocks/page-header/page-header.html')
+
       <div class="container">
-        <div class="breadscrubs">Главная / <span class="breadscrubs_current">Новости</span>
-      </div>
+
+        <div class="content">
+          <div class="central col col-8">
+            <div class="breadscrubs">Главная / <span class="breadscrubs_current">Новости</span></div>
+            <h1>Новости</h1>
+            <div class="time-line">
+              <div class="time-line_title">Все годы</div>
+              <div class="time-line_filter">
+                <div class="time-line_item">2016 (2)</div>
+                <div class="time-line_item">2015 (10)</div>
+                <div class="time-line_item">2014 (3)</div>
+                <div class="time-line_item">2013 (260)</div>
+                <div class="time-line_item">2012 (100)</div>
+              </div>
+            </div>
+            <div class="news-list">
+              <div class="news-list_item news-item">
+                <div class="news-item_data">10.11.2016</div>
+                <a class="news-item_link-more" href="news-item.html">АО «СТАТУС» проводит открытый запрос предложений на право заключения договора на оказание услуг по печати и отправке корреспонденции, email рассылки (*.docx, 70 Кб)</a>
+              </div>
+
+              <div class="news-list_item news-item">
+                <div class="news-item_data">27.10.2016</div>
+                <a class="news-item_link-more" href="news-item.html">О режиме работы Центрального офиса 03 и 04 ноября 2016 года</a>
+              </div>
+
+              <div class="news-list_item news-item">
+                <div class="news-item_data">12.11.2016</div>
+                <a class="news-item_link-more" href="news-item.html">Информация о режиме работы Обособленного подразделения в г. Южно-Сахалинск</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

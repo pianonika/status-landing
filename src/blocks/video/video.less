@@ -7,29 +7,41 @@
 }
 
 
-.play-batton {
-  background-image: url(/images/instagram-cideo-controls.png);
+.play-button {
+  background-image: url(../img/play.png);
   background-position: 0 0;
   background-repeat: no-repeat;
-  height: 135px;
   margin-left: -67px;
   margin-top: -67px;
   top: 50%;
-  width: 135px;
+  width: 147px;
+  height: 147px;
   left: 50%;
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.7;
   transition: all 0.3s;
+  padding-bottom: 40px;
 }
 
-.play-batton:hover {
+.play-button:hover {
   opacity: 1;
 }
 
 .video {
   max-width: 756px;
+  display: block;
 
   &_container {
+    width: 100%;
+    margin: 50px 0;
+    position: relative;
+  }
+
+  &_time {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
     width: 100%;
   }
 }
