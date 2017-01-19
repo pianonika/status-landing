@@ -178,6 +178,7 @@
         </div>
       </section>
 
+
       <section class="section section--tall">
         <div class="container">
           <header class="row row--centred">
@@ -189,89 +190,63 @@
         <div class="container">
           <div class="row">
               <div class="col col-6 col-central">
-                <form action="/" class="form" id="shareholders">
+                <form action="/" class="form js-form-validate-ajax" id="issuers" >
                   <div class="form_row">
                     <fieldset class="form_goup">
                       <legend class="form_field-header required">Как вас зовут</legend>
                       <div class="form_group-inner">
-                        <input  class="form_inp-text form_inp-text--fieldset" type="text" id="second-name" placeholder="Фамилия">
-                        <input  class="form_inp-text form_inp-text--fieldset" type="text" id="first-name" placeholder="Имя">
+                        <div class="form_field form_field--double">
+                          <input  class="form_inp-text form_inp-text--fieldset pic-error required" data-msg-required="Поле не заполнено" type="text" id="secondName" name="secondName" placeholder="Фамилия">
+                        </div>
+                        <div class="form_field form_field--double">
+                          <input  class="form_inp-text form_inp-text--fieldset pic-error required" data-msg-required="Поле не заполнено" type="text" id="firstName" name="firstName" placeholder="Имя">
+                        </div>
                       </div>
                     </fieldset>
                   </div>
                   <div class="form_row">
                     <label for="email" class="form_field-header required">Электронная почта</label>
-                    <input class="form_inp-text form_inp-text--full-width" type="text" name="email" placeholder="123@mail.ru">
+                    <div class="form_field">
+                      <input class="form_inp-text form_inp-text--full-width pic-error required" type="text"  data-msg-required="Поле не заполнено" data-msg-email="Адрес введен некорректно" email="true" name="email" placeholder="123@mail.ru">
+                    </div>
                   </div>
                   <div class="form_row">
-                    <fieldset class="form_goup">
-                      <legend class="form_field-header required">Вы акционер</legend>
-                      <div class="form_group-inner form_group-inner--col-2">
-                        <div class="checkbox form_field">
-                          <input type="checkbox" value="Сбербанк" id="company_1" class="checkbox_input" checked>
-                          <label for="company_1" class="checkbox_label" checked>Сбербанк</label>
-                        </div>
-                        <div class="checkbox form_field">
-                          <input type="checkbox" value="ММК" class="checkbox_input"  id="company_2">
-                          <label for="company_2" class="checkbox_label">ФСК ЕЭС</label>
-                        </div>
-                        <div class="checkbox form_field">
-                          <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="company_3">
-                          <label for="company_3" class="checkbox_label">ММК</label>
-                        </div>
-                        <div class="checkbox form_field">
-                          <input type="checkbox" value="ММК" class="checkbox_input"  id="company_4">
-                          <label for="company_4" class="checkbox_label">Россети</label>
-                        </div>
-                        <div class="checkbox form_field">
-                          <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="company_5">
-                          <label for="company_5" class="checkbox_label">МРСК Центра и Приволжья</label>
-                        </div>
-                      </div>
-                      <div class="form_additional-field">
-                        <div class="checkbox form_field">
-                          <input type="checkbox" value="ММК" class="checkbox_input" id="company_6">
-                          <label for="company_6" class="checkbox_label">Другое</label>
-                        </div>
-                        <input  class="form_inp-text form_inp-text--additional" type="text" name="another-emitent" placeholder="Другие эмитенты">
-                      </div>
-                    </fieldset>
+                    <label for="company-name" class="form_field-header required">Наименование Общества</label>
+                    <div class="form_field">
+                      <input class="form_inp-text form_inp-text--full-width pic-error required" type="text"  data-msg-required="Поле не заполнено" name="company-name" placeholder="Текст">
+                    </div>
                   </div>
                   <div class="form_row">
-                    <label for="massage" class="form_field-header required">Ваш запрос</label>
-                    <textarea  class="form_textarea" name="name" rows="8" cols="80"></textarea>
+                    <label for="inn" class="form_field-header required">ИНН Общества</label>
+                    <div class="form_field">
+                      <input class="form_inp-text form_inp-text--full-width pic-error required" type="text" number="true" data-msg-required="Поле не заполнено" name="inn" placeholder="Текст">
+                    </div>
                   </div>
                   <div class="form_row">
-                    <fieldset class="form_goup">
-                        <legend  class="form_field-header"  class="form_field-header">Какие функции сервиса Вам интересны</legend>
+                    <label for="inn" class="form_field-header required">Телефон для обратной связи</label>
+                    <div class="form_field">
+                      <input class="form_inp-text form_inp-text--full-width pic-error phone" type="text" usPhoneFormat="true"  name="inn" placeholder="+7 (___) ___-__-__" >
+                    </div>
+                  </div>
+
+                  <div class="form_row">
+
+                      <label for="massage" class="form_field-header required">Ваш запрос</label>
+                    <div class="form_field">
+                      <textarea  class="form_textarea required" name="name" rows="8" cols="80" data-msg-required="Заполните поле"></textarea>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <fieldset class="form_goup form_field">
+                        <legend  class="form_field-header required"  class="form_field-header">Вы планируете предоставить акционерам возможность электронного голосования на собраниях акционеров?</legend>
                         <div class="form_group-inner form_group-inner--col">
-                          <div class="checkbox form_field">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input" checked id="check1">
-                            <label for="check1" class="checkbox_label">Информация о лицевых счетах, количестве акций и стоимости портфеля</label>
+                          <div class="checkbox">
+                            <input type="radio" value="Сбербанк" class="checkbox_input" checked id="radio1" name="plan">
+                            <label for="radio1" class="checkbox_label">Да</label>
                           </div>
-                          <div class="checkbox form_field">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input" id="check2">
-                            <label for="check2" class="checkbox_label">Журнал операций</label>
-                          </div>
-                          <div class="checkbox form_field">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check3">
-                            <label for="check3" class="checkbox_label">Голосование на собраниях акционеров</label>
-                          </div>
-                          <div class="checkbox form_field">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check4">
-                            <label for="check4" class="checkbox_label">Начисленные и выплаченные дивиденды</label>
-                          </div>
-                          <div class="checkbox form_field">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check5">
-                            <label for="check5" class="checkbox_label">Консультации</label>
-                          </div>
-                          <div class="checkbox form_field">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check6">
-                            <label for="check6" class="checkbox_label">Получение выписок и справок из реестра</label>
-                          </div>
-                          <div class="checkbox form_field">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input"  id="check7">
-                            <label for="check7" class="checkbox_label">Проведение операций в дистанционном режиме</label>
+                          <div class="checkbox">
+                            <input type="radio" value="Сбербанк" class="checkbox_input" checked id="radio2" name="plan">
+                            <label for="radio2" class="checkbox_label">Нет</label>
                           </div>
                         </div>
                     </fieldset>
@@ -279,24 +254,28 @@
                   <div class="form_separator"></div>
                   <div class="form_row">
                     <div class="checkbox form_field">
-                      <input type="checkbox" value="Сбербанк" class="checkbox_input" id="confirm">
-                      <label for="confirm" class="checkbox_label" value="yes">Настоящим подтверждаю свое соглаие на использование персональных данных <sup class="required"></sup></label>
+                      <div class="form_field">
+                        <input type="checkbox" value="Сбербанк" class="checkbox_input  required" id="confirm" name="confirm" data-msg-required="Необходимо подвердить">
+                        <label for="confirm" class="checkbox_label" value="yes">Настоящим подтверждаю свое соглаие на использование персональных данных <sup class="required"></sup></label>
+                    </div>
                     </div>
                   </div>
                   <div class="form_row">
                     <div class="captcha">
                       <label class="form_field-header required" for="">Введите код с картинки</label>
-                      <div class="form_group-inner form_group-inner--col-2">
-                        <input class="form_inp-text" type="text" name="another-emitent">
-                        <div class="captcha_pic"><img src="img/captcha.jpg" alt=""></div>
+                      <div class="form_group-inner">
+                        <div class="form_field">
+                          <input class="form_inp-text required" type="text" name="captcha" data-msg-required="Введите код с картинки">
+                          <div class="captcha_pic"><img src="img/captcha.jpg" alt=""></div>
+                      </div>
                       </div>
                       <div class="form_field-comment captcha_refresh">Получить новый код</div>
                     </div>
                   </div>
+                  <p><sup class="required"></sup> —  обязательные поля</p>
                   <div class="form_row">
-                    <button class="button" name="web_form_submit" type="submit">Отправить</button>
+                    <button type="submit" class="button--submit">Отправить</button>
                   </div>
-                  <p><sup class="required"></sup> —  введите код с картинки</p>
                 </form>
               </div>
           </div>

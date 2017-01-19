@@ -1,9 +1,9 @@
-$(function () {
-    $('.pagination-slider_num').on('click', function () {
-      $('.pagination-slider_num--active').removeClass('pagination-slider_num--active');
-      $(this).addClass('pagination-slider_num--active');
-    })
-})
+// $(function () {
+//     $('.pagination-slider_num').on('click', function () {
+//       $('.pagination-slider_num--active').removeClass('pagination-slider_num--active');
+//       $(this).addClass('pagination-slider_num--active');
+//     })
+// })
 
 
 // var owl = $('.owl-carousel');

@@ -315,7 +315,7 @@
         <div class="container">
           <div class="row">
               <div class="col col-6 col-central">
-                <form action="/" class="form" id="issuers" >
+                <form action="/" class="form js-form-validate-ajax" id="issuers" >
                   <div class="form_row">
                     <fieldset class="form_goup">
                       <legend class="form_field-header required">Как вас зовут</legend>
@@ -362,11 +362,11 @@
                       </div>
                       <div class="form_additional-field">
                         <div class="form_field--checkbox ">
-                          <input type="checkbox" value="ММК" class="checkbox_input checkbox_input--another" id="company_6">
+                          <input type="checkbox" value="ММК" class="checkbox_input checkbox_input--another" id="company_6" name="shareholders[]">
                           <label for="company_6" class="checkbox_label">Другое</label>
                         </div>
                         <div class="form_field form_field--additional-inp">
-                          <input  class="form_inp-text form_inp-text--additional" type="text" name="anotherIssuers" placeholder="Другие эмитенты"  data-msg-required="Заполните поле">
+                          <input  class="form_inp-text form_inp-text--additional" type="text" name="anotherIssuers" placeholder="Другие эмитенты"   data-msg-required="Заполните поле">
                         </div>
                       </div>
                     </fieldset>
@@ -437,7 +437,7 @@
                   </div>
                   <p><sup class="required"></sup> —  обязательные поля</p>
                   <div class="form_row">
-                    <button type="submit">Отправить</button>
+                    <button type="submit" class="button--submit">Отправить</button>
                   </div>
                 </form>
               </div>
