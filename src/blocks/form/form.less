@@ -12,6 +12,40 @@
     display: block;
   }
 
+  &_field {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &--double {
+      width: 226px;
+      box-sizing: border-box;
+
+      &:nth-child(2n+1) {
+        margin-right: 16px;
+      }
+    }
+
+    &--checkbox{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 15px 0;
+      font: normal 14px/16px 'helveticaneuecyrroman', Helvetica;
+    }
+
+
+    &--additional-inp {
+      margin-left: 45px;
+      flex-grow: 1;
+    }
+  }
+
   &_inp-text {
     margin: 0;
     padding: 11px 11px;
@@ -24,10 +58,6 @@
     &--fieldset {
       width: 226px;
       box-sizing: border-box;
-
-      &:nth-child(2n+1) {
-          margin-right: 16px;
-      }
     }
 
     &--full-width {
@@ -35,8 +65,7 @@
     }
 
     &--additional {
-      margin-left: 45px;
-      flex-grow: 1;
+      width: 100%;
     }
   }
 
@@ -68,7 +97,8 @@
       flex-wrap: nowrap;
     }
 
-    &--col-2  .form_field {
+    &--col-2  .form_field,
+    &--col-2  .form_field--checkbox {
       width: 50%;
     }
   }
@@ -78,8 +108,19 @@
     align-items: center;
   }
 
+  &_error-label {
+    display: block;
+    padding: 12px 0;
+    font: normal 14px/21px 'helveticaneuecyrroman', Helvetica;
+    color: @color-danger;
+    width: 100%;
 
+    &--hide {
+      padding: 0;
+    }
+  }
 }
+
 
 .captcha {
   &_refresh {
@@ -103,3 +144,31 @@
 .form * {
   box-sizing: border-box;
 }
+
+  /* Validation */
+
+
+
+  .error-pic {
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: url('../img/cross.png') 0 0 no-repeat;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+    }
+  }
+
+  .valid-pic {
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: url('../img/check-mark.png') 0 0 no-repeat;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+    }
+  }
