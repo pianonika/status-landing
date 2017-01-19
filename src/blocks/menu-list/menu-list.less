@@ -1,0 +1,114 @@
+.menu-list {
+  justify-content: space-between;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 26px 0 23px;
+
+  &_item {
+    display: flex;
+    align-items:center;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: @color-highlight;
+    }
+  }
+
+  &_link {
+    font: bold 14px/19px 'helveticaneuecyr', Helvetica;
+    text-transform: uppercase;
+    color: @gray;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &_link:hover {
+    color: @color-highlight;
+  }
+
+  &--filter {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+
+.menu-list {
+  justify-content: space-between;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 26px 0 23px;
+
+  &_item {
+    display: flex;
+    align-items:center;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: @color-highlight;
+      }
+    & a:hover, & a:focus {
+      border-color: @color-highlight;
+      text-decoration: none;
+      }
+  }
+
+  &_link {
+    font: bold 14px/19px 'helveticaneuecyr', Helvetica;
+    text-transform: uppercase;
+    color: @gray;
+    text-decoration: none;
+    transition: all 0.3s;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &_link:hover {
+    color: @color-highlight;
+  }
+
+  &--filter {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    box-sizing: border-box;
+    border-bottom: 1px solid @gray-lightest;
+    transition: all 0.2s;
+
+    & .menu-list_link {
+      padding-right: 25px;
+    }
+  }
+
+  &_year {
+    position: relative;
+    display: block;
+  }
+
+  &_count {
+    position: absolute;
+    border: 1px solid #9b9b9b;
+    border-radius: 6px;
+    display: block;
+    top: -4px;
+    right: -29px;
+    font: lighter 9px/12px 'helveticaneuecyr', Helvetica;
+    width: 25px;
+    text-align: center;
+    overflow: hidden;
+  }
+}

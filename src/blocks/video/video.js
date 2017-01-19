@@ -1,6 +1,6 @@
 $(function () {
   $('.buttonbar').click (function () {
-       var video = $(this).before(".video");
+       var video = $(this).prev("video").get(0);
        var button = $(".play-button");
        if (video.paused) {
           video.play();
@@ -10,6 +10,7 @@ $(function () {
           button.show();
        }
   })
+})
 
 
 

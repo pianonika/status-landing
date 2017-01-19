@@ -1,7 +1,15 @@
 /*nataly*/
 $(function () {
   if ($('div').is('.timer')) {
-    const time = () => {
+    timer();
+
+  setInterval(timer, 1000);
+  }
+
+})
+
+
+  function timer () {
     const oneDay = 24*60*60*1000;
     const oneHour = 1000 * 60 * 60;
     const oneMinute = 1000 * 60;
@@ -22,9 +30,4 @@ $(function () {
       document.querySelector('.timer_days').textContent = days;
       document.querySelector('.timer_hours').textContent = hours;
       document.querySelector('.timer_minutes').textContent = minutes;
-
-
   }
-  setInterval(time, 1000);
-  }
-})

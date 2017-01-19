@@ -17,37 +17,3 @@
   &:before {border-left: 1px solid @gray-lightest;}
   &:after {border-right: 1px solid @gray-lightest;}
 }
-.menu-list {
-  justify-content: space-between;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  padding: 26px 0 23px;
-
-  &_item {
-    display: flex;
-    align-items:center;
-    border-bottom: 3px solid rgba(0, 0, 0, 0);
-    transition: all 0.3s;
-
-    &:hover {
-      border-color: @color-highlight;
-    }
-  }
-
-  &_link {
-    font: bold 14px/19px 'HelveticaNeueCyr', Arial;
-    text-transform: uppercase;
-    color: @gray;
-    text-decoration: none;
-    transition: all 0.3s;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  &_link:hover {
-    color: @color-highlight;
-  }
-}

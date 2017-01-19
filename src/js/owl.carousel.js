@@ -3276,10 +3276,11 @@
 $(function () {
 	var itemsCount = $('.logos-slider').find('img').length;
 	if (itemsCount > 4){
-		$('.owl-carousel').owlCarousel({
+		$('.js-logos-slider_owl').owlCarousel({
 		    loop:true,
 		    margin:10,
 		    nav: true,
+				dots: false,
 				navText:[ , ],
 		    items:4
 		})
@@ -3287,7 +3288,7 @@ $(function () {
 		$('.logos-slider').addClass('logos-slider--static');
 	}
 
-	$('.owl-carousel').owlCarousel({
+	$('.js-content-slider_owl').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    nav: true,
@@ -3295,4 +3296,36 @@ $(function () {
 	    items:1,
 			dots: true
 	})
+
+	var pagesCount = $('.js-pagination-slider_owl').find('.pagination-slider_item').length;
+	if (pagesCount > 5){
+		$('.js-pagination-slider_owl').owlCarousel({
+				items: 5,
+		    loop: false,
+				margin: 10,
+				dots: false,
+		    nav: true,
+				navText:[ , ],
+				//onInitialized:clickOnLast,
+				//onChanged:clickOnLast
+		})
+	} else {
+		$('.pagination-slider').addClass('pagination-slider--static');
+	}
+
+
+
+
+
+// clickOnLast();
+// function clickOnLast(event) {
+// 	var activeItems = $('.owl-item.active');
+// 	var activeItemsCount = activeItems.length;
+// 	var lastVisible = $('.owl-item.active').eq(4);
+// 	console.log(lastVisible);
+// 	$(lastVisible).on('click', function () {
+// 		$('.js-pagination-slider_owl').trigger('next.owl.carousel');
+// 	})
+// }
+
 });

@@ -1,0 +1,103 @@
+.pagination {
+  margin: 63px 0;
+  width: 377px;
+  padding: 0 20px;
+}
+
+
+.pagination-slider {
+
+  &_item {
+    text-align: center;
+    font: normal 20px/24px 'helveticaneuecyrroman', Helvetica;
+  }
+
+  &_num {
+    color: @gray;
+    text-decoration: none;
+    cursor: pointer;
+
+    &--active {
+        color: @color-highlight;
+    }
+  }
+}
+.pagination-slider .owl-carousel .owl-item img {
+  width: initial;
+  margin: 0 auto;
+}
+
+.pagination-slider .owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  display: flex;
+  align-items: center;
+}
+
+.pagination-slider .owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 100%;
+}
+
+.pagination-slider .owl-carousel .owl-carousel .owl-stage-outer {
+  position: relative;
+}
+
+.pagination-slider .owl-carousel .owl-nav .owl-prev,
+.pagination-slider .owl-carousel .owl-nav .owl-next {
+  width: 10px;
+  height: 20px;
+  position: absolute;
+}
+
+.pagination-slider .owl-carousel .owl-nav .owl-prev {
+  left: -20px;
+}
+
+.pagination-slider .owl-carousel .owl-nav .owl-next {
+  right: -20px;
+}
+
+.pagination-slider .owl-carousel .owl-nav .owl-prev:before,
+.pagination-slider .owl-carousel .owl-nav .owl-prev:after,
+.pagination-slider .owl-carousel .owl-nav .owl-next:before,
+.pagination-slider .owl-carousel .owl-nav .owl-next:after  {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 14px;
+  background: @gray-lighter;
+  position: absolute;
+}
+
+.pagination-slider .owl-carousel .owl-nav .owl-prev:before {
+  transform: rotate(45deg);
+  bottom: 8px;
+  left: 4px;
+}
+
+.pagination-slider .owl-carousel .owl-nav .owl-prev:after {
+  transform: rotate(-45deg);
+  top: 8px;
+  left: 4px;
+}
+
+
+.pagination-slider .owl-carousel .owl-nav .owl-next:after {
+  transform: rotate(45deg);
+  top: 8px;
+  left: 4px;
+}
+
+.pagination-slider .owl-carousel .owl-nav .owl-next:before {
+  transform: rotate(-45deg);
+  bottom: 8px;
+  left: 4px;
+}
+
+.pagination-slider--static .owl-carousel {
+  display: flex;
+  justify-content:space-between;
+}
