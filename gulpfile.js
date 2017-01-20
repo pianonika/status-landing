@@ -393,10 +393,10 @@ function getComponentsFiles() {
   }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
-  if(fileExistAndHasContent(dirs.source + '/js/jquery.maskedinput.js')) {
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.mask.js')) {
     //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
     //или
-    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.maskedinput.js'); // добавляем в конец
+    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.mask.js'); // добавляем в конец
   }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
