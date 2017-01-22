@@ -13,21 +13,54 @@
     <div class="page-wrapper">
 
       @@include('blocks/page-header/page-header.html')
-      @@include('blocks/key-promo/key-promo.html')
+      <section class="key-promo" style="background-image: url('img/rock-man.png');">
+
+        <div class="container">
+
+          <div class="key-promo_content col col-7">
+
+            <h1 class="section_header section_header--light">Удобный, безопасный, твой -<br> Кабинет акционера</h1>
+
+            <div class="key-promo_text">
+              Кабинет акционера – это удобный и безопасный информационный сервис<br>
+              для взаимодействия акционера с регистратором и участия в корпоративных<br>
+              действиях эмитентов.
+            </div>
+
+            @@include('blocks/timer/timer.html')
+            <!-- <div class="counter">
+              <div class="counter_header">До запуска сервиса</div>
+              <div class="counter_clockface clockface">
+                <div class="clockface_item">60 <div class="clockface_format">дней</div></div>
+                <div class="clockface_item">44 <div class="clockface_format">часов</div></div>
+                <div class="clockface_item">37 <div class="clockface_format">минут</div></div>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+
+        <div class="key-promo_video-background">
+          <video loop autoplay muted class="key-promo_video" id="vid"  poster="img/rock-man.png">
+           <source src="video/rock-man.mp4">
+          </video>
+        </div>
+
+      </section>
 
       <section class="section section--tall">
         <div class="container">
           <header class="row row--centred">
             <div class="section_header-wrapper section_header-wrapper--centred">
-              <h1 class="section_header section_header--centred col col-12">Возможности и преимущества</h1>
+              <h1 class="section_header section_header--centred col col-12" data-aos="fade" data-aos-offset="200" data-aos-duration="400">Возможности и преимущества</h1>
             </div>
           </header>
         </div>
         <div class="container">
           <div class="row">
-            <div class="icon-item-wrapper">
+            <div class="icon-item-wrapper  col col-12">
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#case"></use></svg>
                   </div>
@@ -38,62 +71,62 @@
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500" data-aos-delay="200">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#record-book"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--widespace">
-                    <h2 class="icon-item_header">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header">Журнал операций</h2>
+                    <div class="icon-item_comment">Все операции с ценными бумагами<br>под Вашим оперативным контролем </div>
                   </div>
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500" data-aos-delay="400">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rub"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--widespace">
-                    <h2 class="icon-item_header">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header">Дивиденды</h2>
+                    <div class="icon-item_comment">Контролируйте сумму начисленных<br>и выплаченных дивидендов </div>
                   </div>
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#thumb-idea"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--widespace">
-                    <h2 class="icon-item_header">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header">Новости и события</h2>
+                    <div class="icon-item_comment">Будьте в курсе всех корпоративных<br>событий эмитентов</div>
                   </div>
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500" data-aos-delay="200">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#page"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--widespace">
-                    <h2 class="icon-item_header">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header">Обращения</h2>
+                    <div class="icon-item_comment">Требуется онлайн консультация –<br>обратитесь регистратору или эмитенту </div>
                   </div>
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500" data-aos-delay="400">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#massage"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--widespace">
-                    <h2 class="icon-item_header">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header">Документы</h2>
+                    <div class="icon-item_comment">Все документы для взаимодействия<br>с регистратором в одном месте</div>
                   </div>
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#news"></use></svg>
                   </div>
@@ -104,24 +137,24 @@
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500" data-aos-delay="200">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#info"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--widespace">
-                    <h2 class="icon-item_header">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header">Вопросы и ответы</h2>
+                    <div class="icon-item_comment">Наиболее полная информация по вопросам<br> взаимодействия с регистратором и эмитентом</div>
                   </div>
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered">
+                <div class="icon-item_inner icon-item_inner--bordered"  data-aos="fade" data-aos-offset="200" data-aos-duration="500" data-aos-delay="400">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#letter"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--widespace">
-                    <h2 class="icon-item_header">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header">Уведомления о событиях</h2>
+                    <div class="icon-item_comment">О всех важных событиях в сервисе Вы будите получать e-mail уведомления</div>
                   </div>
                 </div>
               </div>
@@ -134,22 +167,22 @@
         <div class="container">
           <div class="row row--centred">
             <header class="section_header-wrapper section_header-wrapper--centred  section_header-wrapper--commented">
-              <h1 class="section_header section_header--light header--centred">Безопасность</h1>
-              <p class="header-comment">Мы заботимся о безопасности ваших данных</p>
+              <h1 class="section_header section_header--light header--centred"  data-aos="fade" data-aos-offset="200" data-aos-duration="200">Безопасность</h1>
+              <p class="header-comment"  data-aos="fade" data-aos-offset="160" data-aos-duration="600" data-aos-delay="100">Мы заботимся о безопасности ваших данных</p>
             </header>
           </div>
         </div>
         <div class="container">
           <div class="row">
-            <div class="icon-item-wrapper">
+            <div class="icon-item-wrapper"  data-aos="fade-up" data-aos-offset="100" data-aos-duration="500">
               <div class="icon-item col col-4">
                 <div class="icon-item_inner">
                   <div class="icon-item_img icon-item_img--highlight">
                     <svg width="43" height="51"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shield"></use></svg>
                   </div>
                   <div class="icon-item_text">
-                    <h2 class="icon-item_header icon-item_header--light">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header icon-item_header--light">Шифрование данных</h2>
+                    <div class="icon-item_comment">Надежная защита канала<br>и данных </div>
                   </div>
                 </div>
               </div>
@@ -159,8 +192,8 @@
                     <svg width="43" height="51"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24hours"></use></svg>
                   </div>
                   <div class="icon-item_text">
-                    <h2 class="icon-item_header icon-item_header--light">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header icon-item_header--light">Доступность 24/7</h2>
+                    <div class="icon-item_comment">Мы обеспечиваем круглосуточную<br> доступность сервиса </div>
                   </div>
                 </div>
               </div>
@@ -170,8 +203,8 @@
                     <svg width="43" height="51"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#new-massage"></use></svg>
                   </div>
                   <div class="icon-item_text">
-                    <h2 class="icon-item_header icon-item_header--light">Портфель</h2>
-                    <div class="icon-item_comment">Информация о Ваших ценных бумагах, их количестве и стоимости, структуре портфеля </div>
+                    <h2 class="icon-item_header icon-item_header--light">Двухфакторная аутентификация</h2>
+                    <div class="icon-item_comment">Применение одноразовых SMS кодов для входа<br>и подтверждения операций в сервисе</div>
                   </div>
                 </div>
               </div>
@@ -185,12 +218,12 @@
             <div class="icon-item-wrapper icon-item-wrapper--centred">
               <div class="icon-item icon-item--left-pic col col-6">
                 <div class="icon-item_inner">
-                  <div class="icon-item_img">
+                  <div class="icon-item_img" data-aos="fade-right" data-aos-offset="200" data-aos-duration="900"  data-aos-delay="600">
                     <svg width="66" height="33"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#key"></use></svg>
                   </div>
                   <div class="icon-item_text icon-item_text--left-pic">
-                    <h2 class="icon-item_header">ЕСИА</h2>
-                    <div class="icon-item_comment">Интеграция с ЕСИА позволит использовать для входа в сервис <br>Ваш логин и пароль от портала Госуслуги.</div>
+                    <h2 class="icon-item_header" data-aos="fade" data-aos-offset="200" data-aos-duration="200">ЕСИА</h2>
+                    <div class="icon-item_comment" data-aos="fade" data-aos-offset="200" data-aos-duration="200" data-aos-delay="100">Интеграция с ЕСИА позволит использовать для входа в сервис <br>Ваш логин и пароль от портала Госуслуги.</div>
                   </div>
                 </div>
               </div>
@@ -202,8 +235,8 @@
       <section class="section section--tall">
         <div class="container">
           <header class="row row--centred">
-            <div class="section_header-wrapper section_header-wrapper--centred">
-              <h1 class="section_header section_header--centred col col-12">Как подключиться</h1>
+            <div class="section_header-wrapper section_header-wrapper--centred" >
+              <h1 class="section_header section_header--centred col col-12"  data-aos="fade" data-aos-offset="200"  data-aos-duration="400">Как подключиться</h1>
             </div>
           </header>
         </div>
@@ -212,8 +245,8 @@
             <div class="num-item-wrapper">
               <div class="num-item col col-4">
                 <div class="num-item_inner">
-                  <div class="num-item_number">1.</div>
-                  <div class="num-item_text">
+                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="100">1.</div>
+                  <div class="num-item_text" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="150">
                     <div class="num-item_comment">
                       Обратитесь в офис<br> регистратора
                       <a href="/" class="icon-text">
@@ -228,8 +261,8 @@
               </div>
               <div class="num-item col col-4">
                 <div class="num-item_inner">
-                  <div class="num-item_number">2.</div>
-                  <div class="num-item_text">
+                  <div class="num-item_number"  data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="400">2.</div>
+                  <div class="num-item_text"  data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="450">
                     <div class="num-item_comment">
                       Заполните заявление,<br> получите логин и пароль
                       <a href="/" class="icon-text">
@@ -244,8 +277,8 @@
               </div>
               <div class="num-item col col-4">
                 <div class="num-item_inner">
-                  <div class="num-item_number">3.</div>
-                  <div class="num-item_text">
+                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="800">3.</div>
+                  <div class="num-item_text" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="850">
                     <div class="num-item_comment">
 
                       Начните пользоваться всеми<br> преимуществами сервиса!
@@ -262,14 +295,14 @@
         <div class="container">
           <header class="row row--centred">
             <div class="section_header-wrapper section_header-wrapper--centred">
-              <h1 class="section_header section_header--centred col col-12">Тарифы</h1>
+              <h1 class="section_header section_header--centred col col-12"   data-aos="fade" data-aos-offset="100" data-aos-duration="200">Тарифы</h1>
             </div>
           </header>
         </div>
         <div class="container">
           <div class="row">
             <div class="board col col-6">
-              <div class="board_inner">
+              <div class="board_inner" data-aos="fade-left" data-aos-offset="200" data-aos-duration="200">
                 <h2 class="board_header">Условия при наличии договора<br>c эмитентом</h2>
                 <div class="board_content">
                   <p>Сервис предоставляется бесплатно <a href="/">при наличии договора с эмитентом</a>.</p>
@@ -289,7 +322,7 @@
                 </div>
               </div>
             </div>
-            <div class="board col col-6">
+            <div class="board col col-6" data-aos="fade-right" data-aos-offset="200" data-aos-duration="200">
               <div class="board_inner">
                 <h2 class="board_header">Условия при прямом <br>подключении</h2>
                 <div class="board_content">
@@ -308,7 +341,7 @@
         <div class="container">
           <header class="row row--centred">
             <div class="section_header-wrapper section_header-wrapper--centred">
-              <h1 class="section_header section_header--centred col col-12">Есть вопросы – напишите нам!</h1>
+              <h1 class="section_header section_header--centred col col-12" data-aos="fade" data-aos-offset="200" data-aos-duration="300">Есть вопросы – напишите нам!</h1>
             </div>
           </header>
         </div>

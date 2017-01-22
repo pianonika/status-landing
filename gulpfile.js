@@ -393,16 +393,17 @@ function getComponentsFiles() {
   }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
+  if(fileExistAndHasContent(dirs.source + '/js/aos.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/aos.js'); // добавляем в конец
+  }
+
+  // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
   if(fileExistAndHasContent(dirs.source + '/js/jquery.mask.js')) {
-    //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
-    //или
     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.mask.js'); // добавляем в конец
   }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
   if(fileExistAndHasContent(dirs.source + '/js/jquery.form.js')) {
-    //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
-    //или
     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.form.js'); // добавляем в конец
   }
 
@@ -415,15 +416,11 @@ function getComponentsFiles() {
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
   if(fileExistAndHasContent(dirs.source + '/js/owl.carousel.js')) {
-    //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
-    //или
     сomponentsFilesList.js.unshift(dirs.source + '/js/owl.carousel.js'); // добавляем в конец
   }
 
  // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
  if(fileExistAndHasContent(dirs.source + '/js/jquery.validate.js')) {
-   //сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
-   //или
    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.validate.js'); // добавляем в конец
  }
 
