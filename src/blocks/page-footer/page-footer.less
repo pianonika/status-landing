@@ -27,21 +27,25 @@
     display: flex;
   }
 
+  &_logo {
+
+    &:after {
+      content: '';
+      display: flex;
+      position: relative;
+      border-right: 1px solid #acacac;
+      width: 8%;
+      float: right;
+      height: 67px;
+    }
+  }
 }
 
 .copiright {
   font: normal 14px/23px 'helveticaneuecyrroman', Helvetica;
   color: @gray-lightly;
 
-  &:before {
-    content: '';
-    display: flex;
-    position: relative;
-    width: 8%;
-    float: left;
-    height: 67px;
-    border-left: 1px solid #acacac;
-  }
+
 }
 
 .made-in-morizo {
