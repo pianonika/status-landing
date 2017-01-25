@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="28px" viewBox="0 0 24 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>931BCE99-ED6B-4DB5-8F28-925C71641D8A</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="0.018 0.036 0.018 27.8997 23.952 27.8997 23.952 0.036 0.018 0.036"></polygon>
+    </defs>
+    <g id="Страница-собрания" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Страница-собрания---повестка" transform="translate(-449.000000, -1351.000000)">
+            <g id="Group-2" transform="translate(379.000000, 748.000000)">
+                <g id="Group-6" transform="translate(0.000000, 97.000000)">
+                    <g id="Group-5" transform="translate(69.000000, 445.000000)">
+                        <g id="Group-2" transform="translate(1.000000, 55.000000)">
+                            <g id="file" transform="translate(0.000000, 6.000000)">
+                                <g id="Group-3">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <g id="Clip-2"></g>
+                                    <path d="M0.9843,27.8997 L22.9677,27.8997 C23.5194,27.8997 23.952,27.4683 23.952,26.9166 L23.952,1.0203 C23.952,0.4683 23.5194,0.036 22.9677,0.036 L6.4806,0.036 C6.4077,0.036 6.3117,0.036 6.2403,0.0594 C6.2157,0.0594 6.1923,0.084 6.1923,0.084 C6.1194,0.1074 6.0714,0.132 6,0.1554 C5.9766,0.18 5.952,0.18 5.9286,0.2037 C5.856,0.2517 5.7843,0.2997 5.7363,0.3723 L0.2403,6.8517 C0.1677,6.9243 0.1194,7.0203 0.0714,7.1166 C0.048,7.14 0.048,7.188 0.048,7.2126 C0.0234,7.284 0.0234,7.3554 0,7.4283 L0,26.892 C0,27.4683 0.456,27.8997 0.9843,27.8997 Z M5.496,3.7074 L5.496,6.54 L3.096,6.54 L5.496,3.7074 Z M1.9677,8.484 L6.4806,8.484 C7.0323,8.484 7.4637,8.0517 7.4637,7.4997 L7.4637,2.0037 L21.9843,2.0037 L21.9843,25.932 L1.9677,25.932 L1.9677,8.484 Z" id="Fill-1" fill="#FF9000" mask="url(#mask-2)"></path>
+                                </g>
+                                <text id="doc" font-family="HelveticaNeueCyr-Bold, HelveticaNeueCyr" font-size="10" font-weight="bold" line-spacing="21" fill="#FF9000">
+                                    <tspan x="4" y="15">doc</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -46,5 +46,8 @@
       "source": "./src",
       "build": "./build"
     }
+  },
+  "dependencies": {
+    "ttf2woff": "^2.0.1"
   }
 }

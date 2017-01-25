@@ -12,13 +12,15 @@
     border-bottom: 3px solid rgba(0, 0, 0, 0);
     transition: all 0.3s;
 
-    &:hover {
+    &:hover, &--active {
       border-color: @color-highlight;
+      color: @color-highlight;
       }
     & a:hover, & a:focus {
       border-color: @color-highlight;
       text-decoration: none;
       }
+
   }
 
   &_link {
@@ -36,9 +38,6 @@
     }
   }
 
-  &_link:hover {
-    color: @color-highlight;
-  }
 
   &--filter {
     padding: 0;

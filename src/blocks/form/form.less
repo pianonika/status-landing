@@ -38,11 +38,14 @@
       margin: 15px 0;
       font: normal 14px/16px 'helveticaneuecyrroman', Helvetica;
     }
-
-
     &--additional-inp {
       margin-left: 45px;
       flex-grow: 1;
+      align-self: center;
+      position: absolute;
+      right: 0;
+      top: 4px;
+      width: 341px;
     }
   }
 
@@ -66,6 +69,11 @@
 
     &--additional {
       width: 100%;
+      display: none;
+    }
+
+    &::placeholder {
+      color: #c7c7c7;
     }
   }
 
@@ -79,6 +87,13 @@
     border: 1px solid @gray-lightest;
     padding: 11px 11px;
     outline: none;
+    font: normal 14px/17px  'helveticaneuecyr', Helvetica;
+    color: @gray-lighter;
+
+
+    &::placeholder {
+      color: #c7c7c7;
+    }
   }
 
   &_separator {
@@ -107,6 +122,7 @@
     display: flex;
     align-items: center;
     align-items: flex-start;
+    position: relative;
   }
 
   &_error-label {
@@ -126,7 +142,6 @@
 .captcha {
   &_refresh {
     color: @color-highlight;
-    margin-top: 26px;
     cursor: pointer;
   }
 
@@ -149,27 +164,36 @@
   /* Validation */
 
 
+.form_field {
 
-  .error-pic {
     &:after {
       content: '';
       width: 12px;
       height: 12px;
-      background: url('../img/cross.png') 0 0 no-repeat;
       position: absolute;
       top: 14px;
       right: 14px;
+    }
+
+    &.hide-error:after {
+      display: none;
+    }
+
+}
+  .error-pic {
+     &:after {
+     background: url('../img/cross.png') 0 0 no-repeat;
     }
   }
 
   .valid-pic {
-    &:after {
-      content: '';
-      width: 12px;
-      height: 12px;
+    &:after  {
       background: url('../img/check-mark.png') 0 0 no-repeat;
-      position: absolute;
-      top: 14px;
-      right: 14px;
     }
   }
+
+// .form_error-label {
+//   position: absolute;
+//   left: 0;
+//   bottom: -40px;
+// }

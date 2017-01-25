@@ -45,7 +45,7 @@
           <div class="row">
             <div class="icon-item-wrapper  col col-12">
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="200">
+                <div class="icon-item_inner icon-item_inner--bordered"   data-aos="fade" data-aos-offset="200" data-aos-duration="500">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#handshake"></use></svg>
                   </div>
@@ -55,7 +55,7 @@
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="200">
+                <div class="icon-item_inner icon-item_inner--bordered"   data-aos="fade" data-aos-offset="200" data-aos-duration="500"  data-aos-delay="200">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#graph"></use></svg>
                   </div>
@@ -65,7 +65,7 @@
                 </div>
               </div>
               <div class="icon-item icon-item--bordered">
-                <div class="icon-item_inner icon-item_inner--bordered" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="200">
+                <div class="icon-item_inner icon-item_inner--bordered"   data-aos="fade" data-aos-offset="200" data-aos-duration="500"  data-aos-delay="400">
                   <div class="icon-item_img icon-item_img--widespace">
                     <svg width="55" height="45"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#thumbup"></use></svg>
                   </div>
@@ -219,20 +219,20 @@
                   <div class="form_row">
                     <label for="inn" class="form_field-header required">ИНН Общества</label>
                     <div class="form_field">
-                      <input class="form_inp-text form_inp-text--full-width pic-error required" type="text" number="true" data-msg-required="Поле не заполнено" name="inn" placeholder="Текст">
+                      <input class="form_inp-text form_inp-text--full-width pic-error required" type="text" number="true" data-msg-number="Поле заполнено не корректно" data-msg-required="Поле не заполнено" name="inn" placeholder="Текст">
                     </div>
                   </div>
                   <div class="form_row">
                     <label for="phone" class="form_field-header required">Телефон для обратной связи</label>
                     <div class="form_field">
-                      <input class="form_inp-text form_inp-text--full-width pic-error phone required" type="text" name="phone" usPhoneFormat="true">
+                      <input class="form_inp-text form_inp-text--full-width pic-error phone required" type="text" name="phone" usPhoneFormat="true" data-msg-required="Поле не заполнено">
                     </div>
                   </div>
 
                   <div class="form_row">
                       <label for="massage" class="form_field-header required">Ваш запрос</label>
                     <div class="form_field">
-                      <textarea  class="form_textarea required" name="name" rows="8" cols="80" required data-msg-required="Заполните поле"></textarea>
+                      <textarea  class="form_textarea required" name="name" rows="8" cols="80" required data-msg-required="Поле не заполнено"></textarea>
                     </div>
                   </div>
 
@@ -255,7 +255,7 @@
                   <div class="form_row">
                     <div class="checkbox form_field">
                       <div class="form_field">
-                        <input type="checkbox" value="Сбербанк" class="checkbox_input  required" id="confirm" name="confirm" data-msg-required="Необходимо подвердить">
+                        <input type="checkbox" value="Сбербанк" class="checkbox_input required" checked id="confirm" name="confirm" data-msg-required="Поле не заполнено">
                         <label for="confirm" class="checkbox_label" value="yes">Настоящим подтверждаю свое соглаие на использование персональных данных <sup class="required"></sup></label>
                     </div>
                     </div>
@@ -266,10 +266,12 @@
                       <div class="form_group-inner">
                         <div class="form_field">
                           <input class="form_inp-text required" type="text" name="captcha" data-msg-required="Введите код с картинки">
-                          <div class="captcha_pic"><img src="img/captcha.jpg" alt=""></div>
+                          <div class="captcha_pic">
+                              <img src="img/captcha.jpg" alt="">
+                              <div class="form_field-comment captcha_refresh">Получить новый код</div>
+                          </div
                       </div>
                       </div>
-                      <div class="form_field-comment captcha_refresh">Получить новый код</div>
                     </div>
                   </div>
                   <p><sup class="required"></sup> —  обязательные поля</p>

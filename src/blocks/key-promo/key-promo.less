@@ -9,6 +9,7 @@
     margin-top: 112px;
     z-index: 10;
     position: absolute;
+    z-index: 120;
   }
 
   &_text {
@@ -32,5 +33,13 @@
     width:100%;
     position: absolute;
     transform: translateX(-50%) translateY(-50%);
+  }
+
+  &_substrate {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 100;
   }
 }

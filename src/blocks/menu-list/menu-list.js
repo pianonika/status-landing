@@ -22,6 +22,8 @@ $(function () {
 
         $('.menu-list_item').on('click', function () {
             var yearNumCurrent = $('.menu-list--filter').find('.menu-list_item').index(this) + 1;
+            $('.menu-list_item').removeClass('menu-list_item--active');
+            $(this).addClass('menu-list_item--active');
             if ((yearNumCurrent < yearNum) && (yearNumCurrent == yearNumVisibleEnd) ){
               var marginEl = -(elWidth*(yearNumVisibleEnd - 4));
               $('.menu-list--filter').css("margin-left", marginEl);

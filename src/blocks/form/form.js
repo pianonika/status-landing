@@ -1,9 +1,9 @@
 $(function($){
-	$('.js-form-validate-ajax').each(function(){
+	$('.js-form-validate-ajax').each(function (){
 		var $this_form = $(this);
 	  jQuery.validator.addMethod("usPhoneFormat", function (value, element) {
 	    return this.optional(element) || /^\+7 \(\d{3}\) \d{3}\-\d{2}(-\d{2})?$/.test(value);
-	}, "Введите корректный номер телефона");
+		}, "Введите корректный номер телефона");
 
 		$this_form.validate({
 	    rules: {
@@ -21,8 +21,8 @@ $(function($){
 	    highlight: function(element, errorClass, validClass) {
 	      $(element).addClass(errorClass).removeClass(validClass);
 	      if ($(element).is("input.pic-error") ) {
-	          $(element).closest('.form_field').addClass('error-pic').removeClass('valid-pic');
-	          $(element).closest('.form_field').find('.form_error-label').removeClass("form_error-label--hide")
+					$(element).closest('.form_field').addClass('error-pic').removeClass('valid-pic');
+					$(element).closest('.form_field').find('.form_error-label').removeClass("form_error-label--hide");
 	      }
 	    },
 	    unhighlight: function(element, errorClass, validClass) {
@@ -87,7 +87,7 @@ $(function($){
 	      //
 	      //   }
 	      // });
-	      var $mfpContent = $('<div/>').addClass('mfp-content-holder').append('Ваша заявка отправлена');
+	      var $mfpContent = $('<div/>').addClass('mfp-content-holder').append('<h1 class="popup_header">Спасибо</h1> <p>Ваше обращение зарегистрировано.<br> Наши сотрудники ответят на него в ближайшее время.</p>');
 	      $.magnificPopup.open({
 	        items: {
 	          type: 'inline',
