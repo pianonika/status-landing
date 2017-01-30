@@ -95,7 +95,7 @@
             <div class="num-item-wrapper">
               <div class="num-item col col-4">
                 <div class="num-item_inner">
-                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="100">1.</div>
+                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="100">1</div>
                   <div class="num-item_text" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="150">
                     <div class="num-item_comment">
                       Обратитесь в Управление<br>по работе с эмитентами
@@ -111,7 +111,7 @@
               </div>
               <div class="num-item col col-4">
                 <div class="num-item_inner">
-                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="400">2.</div>
+                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="400">2</div>
                   <div class="num-item_text" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="450">
                     <div class="num-item_comment">
                       Заключите договор<br>о предоставление сервиса акционерам
@@ -121,7 +121,7 @@
               </div>
               <div class="num-item col col-4">
                 <div class="num-item_inner">
-                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="800">3.</div>
+                  <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="800">3</div>
                   <div class="num-item_text" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="850">
                     <div class="num-item_comment">
                       Проинформируйте акционеров<br>о предоставление сервиса
@@ -205,7 +205,7 @@
                     </fieldset>
                   </div>
                   <div class="form_row">
-                    <label for="email" class="form_field-header required">Электронная почта</label>
+                    <label for="email" class="form_field-header required">Электронная почта (для обратной связи)</label>
                     <div class="form_field">
                       <input class="form_inp-text form_inp-text--full-width pic-error required" type="text"  data-msg-required="Поле не заполнено" data-msg-email="Адрес введен некорректно" email="true" name="email" placeholder="123@mail.ru">
                     </div>
@@ -230,7 +230,7 @@
                   </div>
 
                   <div class="form_row">
-                      <label for="massage" class="form_field-header required">Ваш запрос</label>
+                      <label for="massage" class="form_field-header required">Ваш вопрос</label>
                     <div class="form_field">
                       <textarea  class="form_textarea required" name="name" rows="8" cols="80" required data-msg-required="Поле не заполнено"></textarea>
                     </div>
@@ -241,12 +241,12 @@
                         <legend  class="form_field-header required"  class="form_field-header">Вы планируете предоставить акционерам возможность электронного голосования на собраниях акционеров?</legend>
                         <div class="form_group-inner form_group-inner--col">
                           <div class="checkbox">
-                            <input type="radio" value="Сбербанк" class="checkbox_input" checked id="radio1" name="plan">
-                            <label for="radio1" class="checkbox_label">Да</label>
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input required" id="voite-yes" name="plan" name="issuers[]"  aria-required="true"   data-msg-required="Поле не заполнено">
+                            <label for="yes" class="checkbox_label">Да</label>
                           </div>
                           <div class="checkbox">
-                            <input type="radio" value="Сбербанк" class="checkbox_input" checked id="radio2" name="plan">
-                            <label for="radio2" class="checkbox_label">Нет</label>
+                            <input type="checkbox" value="Сбербанк" class="checkbox_input" id="voite-no" name="plan" name="issuers[]">
+                            <label for="no" class="checkbox_label">Нет</label>
                           </div>
                         </div>
                     </fieldset>
