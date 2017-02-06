@@ -4,8 +4,9 @@
 
 
 .page-header {
+  width: 100%; 
   border-bottom: 1px solid @gray-lightest;
-
+  align-self: flex-start;
 }
 .logo {
   padding-top: 34px;
@@ -21,6 +22,11 @@
 
   &_number {
     font: 200 30px/32px 'helveticaneuecyr', Helvetica;
+  }
+
+  &_number-link, &_number-link:hover {
+    color: #3c3c3c;
+    text-decoration: none;
   }
 
 }

@@ -14,8 +14,12 @@
 
     &:hover, &--active {
       border-color: @color-highlight;
+    }
+
+    &:hover .menu-list_link, &--active .menu-list_link {
       color: @color-highlight;
-      }
+    }
+
     & a:hover, & a:focus {
       border-color: @color-highlight;
       text-decoration: none;
@@ -44,7 +48,12 @@
     margin: 0;
     position: absolute;
     box-sizing: border-box;
+    justify-content: flex-start;
     transition: all 0.2s;
+
+    & .menu-list_item {
+      margin-right: 79.4px;
+    }
 
     & .menu-list_link {
       padding-right: 25px;
