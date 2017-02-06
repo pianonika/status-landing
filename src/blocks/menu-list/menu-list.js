@@ -15,7 +15,8 @@ $(function () {
   }
 
   function showNextYear() {
-      var elWidth = 137.47;
+      //var elWidth = 137.47;
+      var elWidth = 140;
       var yearNumVisibleEnd = 5;
       var yearNumVisibleStart = 1;
       var yearNum = $('.menu-list--filter').find('.menu-list_item').length;

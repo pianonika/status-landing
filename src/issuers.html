@@ -99,7 +99,7 @@
                   <div class="num-item_text" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="150">
                     <div class="num-item_comment">
                       Обратитесь в Управление<br>по работе с эмитентами
-                      <a href="/" class="icon-text">
+                      <a href="#callback_form" class="icon-text anchor">
                             <div class="icon-text_img">
                               <svg width="23" height="27"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#doc-ico"></use></svg>
                             </div>
@@ -114,7 +114,7 @@
                   <div class="num-item_number" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="400">2</div>
                   <div class="num-item_text" data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="450">
                     <div class="num-item_comment">
-                      Заключите договор<br>о предоставление сервиса акционерам
+                      Заключите соглашение о&nbsp;предоставление сервиса акционерам
                     </div>
                   </div>
                 </div>
@@ -149,7 +149,7 @@
             <div class="board board--separated col col-12">
               <div class="board_inner">
                 <div class="board_right">
-                  <h2 class="board_header" data-aos="fade" data-aos-offset="100" data-aos-duration="400" data-aos-delay="100">Абонентный принцип тарификации</h2>
+                  <h2 class="board_header" data-aos="fade" data-aos-offset="100" data-aos-duration="400" data-aos-delay="100">Абонентская плата</h2>
                   <div class="board_content">
                     <div class="price">
                       <div class="price_title" data-aos="zoom-out" data-aos-offset="100" data-aos-duration="300" data-aos-delay="300">Плата</div>
@@ -182,7 +182,7 @@
       <section class="section section--tall">
         <div class="container">
           <header class="row row--centred">
-            <div class="section_header-wrapper section_header-wrapper--centred">
+            <div class="section_header-wrapper section_header-wrapper--centred"  name="callback_form">
               <h1 class="section_header section_header--centred col col-12" data-aos="fade" data-aos-offset="200" data-aos-duration="400">Есть вопросы – напишите нам!</h1>
             </div>
           </header>
@@ -192,17 +192,10 @@
               <div class="col col-6 col-central">
                 <form action="/" class="form js-form-validate-ajax" id="issuers" >
                   <div class="form_row">
-                    <fieldset class="form_goup">
-                      <legend class="form_field-header required">Как вас зовут</legend>
-                      <div class="form_group-inner">
-                        <div class="form_field form_field--double">
-                          <input  class="form_inp-text form_inp-text--fieldset pic-error required" data-msg-required="Поле не заполнено" type="text" id="secondName" name="secondName" placeholder="Фамилия">
-                        </div>
-                        <div class="form_field form_field--double">
-                          <input  class="form_inp-text form_inp-text--fieldset pic-error required" data-msg-required="Поле не заполнено" type="text" id="firstName" name="firstName" placeholder="Имя">
-                        </div>
-                      </div>
-                    </fieldset>
+                    <label for="name" class="form_field-header required" name="emal">Как вас зовут</label>
+                    <div class="form_field">
+                      <input class="form_inp-text form_inp-text--full-width pic-error required" type="text"  data-msg-required="Поле не заполнено" name="name" placeholder="Ваше имя">
+                    </div>
                   </div>
                   <div class="form_row">
                     <label for="email" class="form_field-header required">Электронная почта (для обратной связи)</label>
@@ -241,11 +234,11 @@
                         <legend  class="form_field-header required"  class="form_field-header">Вы планируете предоставить акционерам возможность электронного голосования на собраниях акционеров?</legend>
                         <div class="form_group-inner form_group-inner--col">
                           <div class="checkbox">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input required" id="voite-yes" name="plan" name="issuers[]"  aria-required="true"   data-msg-required="Поле не заполнено">
+                            <input type="radio" value="Сбербанк" class="checkbox_input required" id="voite-yes" name="plan" name="issuers[]"  aria-required="true"   data-msg-required="Поле не заполнено">
                             <label for="yes" class="checkbox_label">Да</label>
                           </div>
                           <div class="checkbox">
-                            <input type="checkbox" value="Сбербанк" class="checkbox_input" id="voite-no" name="plan" name="issuers[]">
+                            <input type="radio" value="Сбербанк" class="checkbox_input" id="voite-no" name="plan" name="issuers[]">
                             <label for="no" class="checkbox_label">Нет</label>
                           </div>
                         </div>
@@ -256,7 +249,7 @@
                     <div class="checkbox form_field">
                       <div class="form_field">
                         <input type="checkbox" value="Сбербанк" class="checkbox_input required" checked id="confirm" name="confirm" data-msg-required="Поле не заполнено">
-                        <label for="confirm" class="checkbox_label" value="yes">Настоящим подтверждаю свое соглаие на использование персональных данных <sup class="required"></sup></label>
+                        <label for="confirm" class="checkbox_label" value="yes">Настоящим подтверждаю свое согласие на обработку персональных данных<sup class="required"></sup></label>
                     </div>
                     </div>
                   </div>
