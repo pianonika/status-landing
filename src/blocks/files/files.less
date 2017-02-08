@@ -14,8 +14,8 @@
 
   &_format {
     position: absolute;
-    top: 0 px;
-    left: 0;
+    top: 0px;
+    left: -38px;
     border: 2px solid @color-grafic;
     color: @color-grafic;
     width: 20px;
@@ -32,7 +32,7 @@
       border: 5px solid #fff;
       border-bottom-color: @color-grafic;
       border-right-color: @color-grafic;
-      transition: all .2s;
+      //transition: all .2s;
       z-index: 5;
     }
 
@@ -47,26 +47,48 @@
       border-right-color: #fff;
       border-top-color: rgba(255, 255, 255, 0);
       border-left-color: rgba(255, 255, 255, 0);
-      transition: all .2s;
+      //transition: all .2s;
       z-index: 10;
+    }
+
+    &--only-name {
+      top: -6px;
+    }
+
+    &--netral::before {
+      border-bottom-color: @gray-lightest;
+      border-right-color: @gray-lightest;
+      z-index: 10;
+    }
+
+    &--netral::after {
+      border-top-color: @gray-lightest;
+      border-left-color: @gray-lightest;
+      z-index: 5;
     }
   }
 
 
   &_link {
     text-decoration: none;
+    display: inline-block;
+    position: relative;
 
 
     &:hover {
-      text-decoration: none;
+       text-decoration: none;
 
-    & .file_format::after {
-      border-width: 7px;
-      }
-
-    & .file_format::before {
-      border-width: 4px;
-      }
+       & .file_name:hover {
+          text-decoration: underline;
+       }
+    //
+    // & .file_format::after {
+    //   border-width: 7px;
+    //   }
+    //
+    // & .file_format::before {
+    //   border-width: 4px;
+    //   }
     }
 
   }
@@ -79,5 +101,9 @@
   &_size {
     color: @gray-lighter;
     font: normal 12px/21px 'helveticaneuecyr', Helvetica;
+  }
+
+  &--centred {
+    text-align: center;
   }
 }
