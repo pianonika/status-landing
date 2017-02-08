@@ -14,8 +14,12 @@
 
     &:hover, &--active {
       border-color: @color-highlight;
+    }
+
+    &:hover .menu-list_link, &--active .menu-list_link {
       color: @color-highlight;
-      }
+    }
+
     & a:hover, & a:focus {
       border-color: @color-highlight;
       text-decoration: none;
@@ -24,7 +28,7 @@
   }
 
   &_link {
-    font: bold 14px/19px 'helveticaneuecyr', Helvetica;
+    font: bold 16px/19px 'helveticaneuecyr', Helvetica;
     text-transform: uppercase;
     color: @gray;
     text-decoration: none;
@@ -44,8 +48,12 @@
     margin: 0;
     position: absolute;
     box-sizing: border-box;
-    border-bottom: 1px solid @gray-lightest;
+    justify-content: flex-start;
     transition: all 0.2s;
+
+    & .menu-list_item {
+      margin-right: 79.4px;
+    }
 
     & .menu-list_link {
       padding-right: 25px;
@@ -64,7 +72,7 @@
     display: block;
     top: -4px;
     right: -29px;
-    font: lighter 9px/12px 'helveticaneuecyr', Helvetica;
+    font: 200 9px/12px 'helveticaneuecyr', Helvetica;
     width: 25px;
     text-align: center;
     overflow: hidden;

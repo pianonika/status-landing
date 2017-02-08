@@ -1,0 +1,83 @@
+.files {
+  display: flex;
+  flex-direction: column;
+
+
+  &_item {
+    position: relative;
+    padding-left: 38px;
+    margin: 14px 0;
+  }
+}
+
+.file {
+
+  &_format {
+    position: absolute;
+    top: 0 px;
+    left: 0;
+    border: 2px solid @color-grafic;
+    color: @color-grafic;
+    width: 20px;
+    height: 18px;
+    font: bold 10px/21px 'helveticaneuecyr', Helvetica;
+    padding: 6px 0 0 0;
+    text-align: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      border: 5px solid #fff;
+      border-bottom-color: @color-grafic;
+      border-right-color: @color-grafic;
+      transition: all .2s;
+      z-index: 5;
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      border: 2px solid #fff;
+      border-bottom-color: #fff;
+      border-right-color: #fff;
+      border-top-color: rgba(255, 255, 255, 0);
+      border-left-color: rgba(255, 255, 255, 0);
+      transition: all .2s;
+      z-index: 10;
+    }
+  }
+
+
+  &_link {
+    text-decoration: none;
+
+
+    &:hover {
+      text-decoration: none;
+
+    & .file_format::after {
+      border-width: 7px;
+      }
+
+    & .file_format::before {
+      border-width: 4px;
+      }
+    }
+
+  }
+
+  &_name {
+    color: #45ae00;
+    font-family: 'helveticaneuecyrroman', Helvetica;
+  }
+
+  &_size {
+    color: @gray-lighter;
+    font: normal 12px/21px 'helveticaneuecyr', Helvetica;
+  }
+}

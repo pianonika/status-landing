@@ -2,6 +2,14 @@
 
  AOS.init();
 
+ $('.anchor').on("click", function(){
+        event.preventDefault();
+        var name = $(this).attr('href').slice(1);
+        var anchor = $('[name="' + name + '"]');
+        var offsetTop = $(anchor).offset().top;
+        $('body').animate({scrollTop: offsetTop}, 400);
+        return false;
+    });
 });
 
 /*

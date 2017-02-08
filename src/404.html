@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Заголовок</title>
+    <meta name="description" content="">
+    @@include('_include/page_head.html')
+  </head>
+
+  <body class="page">
+    @@include('blocks/sprite-svg--localstorage/img/sprite-svg--ls.svg')
+    <div class="page-wrapper">
+
+      @@include('blocks/page-header/page-header.html')
+
+
+      <div class="p404__wrap">
+        <div class="p404">
+          <h1 class="p404__header">Ошибка 404</h1>
+          <div class="p404__descr">Запрашиваемая вами страница не существует</div>
+          <div class="p404__descr-link">
+            <a href="mail:support@rosstatus.ru" class="p404__descr-lind">support@rosstatus.ru</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    @@include('blocks/page-footer/page-footer.html')
+    @@include('_include/page_bottom.html')
+
+  </body>
+</html>
