@@ -393,6 +393,16 @@ function getComponentsFiles() {
   }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.formstyler.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.formstyler.js'); // добавляем в конец
+  }
+
+  // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
+  if(fileExistAndHasContent(dirs.source + '/js/baron.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/baron.js'); // добавляем в конец
+  }
+
+  // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
   if(fileExistAndHasContent(dirs.source + '/js/aos.js')) {
     сomponentsFilesList.js.unshift(dirs.source + '/js/aos.js'); // добавляем в конец
   }
@@ -424,15 +434,15 @@ function getComponentsFiles() {
    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.validate.js'); // добавляем в конец
  }
 
- // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
- if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
-    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
-  }
-
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/js/global-css.css')) {
-    сomponentsFilesList.additionalCss.unshift(dirs.source + '/js/global-css.css');
+    сomponentsFilesList.additionalCss.push(dirs.source + '/js/global-css.css');
   }
+
+  // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
+     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
+   }
 
   // Если хочется иметь в папке сборки какие-то еще отдельные CSS-файлы, пишите их здесь
   // if(fileExistAndHasContent(dirs.source + '/css/file_name.css')) {

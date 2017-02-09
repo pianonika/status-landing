@@ -1,0 +1,24 @@
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+.city-address {
+  width: 305px;
+  padding-right: 55px;
+
+  &_item {
+    margin-bottom: 40px;
+    font:normal 16px/26px 'helveticaroman', Helvetica;
+
+    &-ttl {
+      font: bold 16px/26px 'helveticaneuecyr', Helvetica;
+    }
+
+    &-phone a,
+    &-phone a:hover {
+      color: @gray;
+    }
+  }
+
+  &_inner {
+    padding-right: 30px;
+  }
+}

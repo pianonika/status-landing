@@ -1,17 +1,46 @@
- $(function () {
+$(function () {
 
- AOS.init();
+   AOS.init();
 
- $('.anchor').on("click", function(){
-        event.preventDefault();
-        var name = $(this).attr('href').slice(1);
-        var anchor = $('[name="' + name + '"]');
-        var offsetTop = $(anchor).offset().top;
-        $('body').animate({scrollTop: offsetTop}, 400);
-        return false;
-    });
+   $('.anchor').on("click", function() {
+     event.preventDefault();
+     var name = $(this).attr('href').slice(1);
+     var anchor = $('[name="' + name + '"]');
+     var offsetTop = $(anchor).offset().top;
+     $('body').animate({
+       scrollTop: offsetTop
+     }, 400);
+     return false;
+   });
+
+
+   $('select').styler({
+     onFormStyled: function () {
+       console.log('После загрузки');
+       if ($('.form_field-select').find('.baron__scroller').length == 0 ) {
+         var scroll = $('<div class="scroller__bar-wrapper"> <div class="scroller__bar"></div></div>');
+         var scrollContainer = $('.jq-selectbox__dropdown');
+         $(scrollContainer).append(scroll).addClass('baron__scroller').find('ul').wrap('<div class="custom_scrollbar custom_scrollbar--select"></div>');
+         baron({
+           root: '.cjq-selectbox__dropdown',
+           scroller: '.custom_scrollbar--select',
+           bar: '.scroller__bar',
+         })
+       }
+     }
+   });
+
+$(scrollContainer).find('ul').wrap('<div class="custom_scrollbar"></div>')
 });
 
+window.onload = baron ();
+function baron () {
+  baron({
+     root: '.custom_scrollbar',
+     scroller: '.baron__scroller',
+     bar: '.scroller__bar',
+   })
+ }
 /*
   Поиск ближайшего родителя по селектору
   https://github.com/oneuijs/You-Dont-Need-jQuery/blob/master/README-ru.md#1.6
