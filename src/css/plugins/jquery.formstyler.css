@@ -204,7 +204,7 @@
 	background: #F5F5F5;
 	box-shadow: inset 1px 1px 3px #DDD;
 }
-.jq-selectbox.focused .jq-selectbox__select {
+.jq-selectbox.opened .jq-selectbox__select {
 	border: 1px solid @color-highlight;
 }
 .jq-selectbox.disabled .jq-selectbox__select {
@@ -255,8 +255,7 @@
 	padding: 0;
 	border: 1px solid @color-highlight;
 	background: #fff;
-	overflow-y: auto;
-	max-height: 200px;
+	max-height: 400px;
 }
 .jq-selectbox__search {
 	margin: 5px;
@@ -299,11 +298,12 @@
 	color: #231F20;
 }
 .jq-selectbox li.selected {
-	background-color: @color-highlight;
+	background-color: tint(@color-highlight, 20%);
+
 	color: #FFF;
 }
 .jq-selectbox li:hover {
-	background-color: @color-highlight;
+	background-color: tint(@color-highlight, 20%);
 	color: #FFF;
 }
 .jq-selectbox li.disabled {

@@ -4,19 +4,28 @@
      width: 0;
  }
 
- .baron__scroller {
-   overflow-y: scroll;
-  box-sizing: border-box;
-  margin: 0px;
-  border: 0px;
- }
+.baron__clipper {
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box; 
 
-.custom_scrollbar {
-  height: 482px;
+  &--select {;
+    height: 200px;
+  }
+
+  &--offices {
+    height: 482px;
+  }
+}
+
+
+.scroller {
   display: block;
   position: relative;
-  overflow: hidden;
-  padding-right: 14px;
+  overflow-y: scroll;
+  //padding-right: 14px;
+  width: 100%;
+  height: 100%;
 }
 
 .custom_scrollbar .scroller {
@@ -28,6 +37,18 @@
 }
 
 
+ .baron__scroller {
+  overflow-y: scroll;
+  box-sizing: border-box;
+    height: 482px;
+ }
+
+.custom_scrollbar {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-right: 14px;
+}
 
 .scroller__bar-wrapper {
   position: absolute;

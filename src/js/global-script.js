@@ -14,33 +14,34 @@ $(function () {
    });
 
 
+    baron({
+       root: '.baron__clipper--offices',
+       scroller: '.scroller',
+       bar: '.scroller__bar',
+     });
+
+
    $('select').styler({
      onFormStyled: function () {
        console.log('После загрузки');
        if ($('.form_field-select').find('.baron__scroller').length == 0 ) {
          var scroll = $('<div class="scroller__bar-wrapper"> <div class="scroller__bar"></div></div>');
          var scrollContainer = $('.jq-selectbox__dropdown');
-         $(scrollContainer).append(scroll).addClass('baron__scroller').find('ul').wrap('<div class="custom_scrollbar custom_scrollbar--select"></div>');
+         $(scrollContainer).append(scroll).find('ul').wrap('<div class="baron__clipper baron__clipper--select"></div>').wrap('<div class="scroller"></div>');
+         var clipper = $('.jq-selectbox__dropdown .baron__clipper');
+         $(clipper).append(scroll).
          baron({
-           root: '.cjq-selectbox__dropdown',
-           scroller: '.custom_scrollbar--select',
+           root: '.baron__clipper',
+           scroller: '.scroller',
            bar: '.scroller__bar',
          })
        }
      }
    });
 
-$(scrollContainer).find('ul').wrap('<div class="custom_scrollbar"></div>')
 });
 
-window.onload = baron ();
-function baron () {
-  baron({
-     root: '.custom_scrollbar',
-     scroller: '.baron__scroller',
-     bar: '.scroller__bar',
-   })
- }
+
 /*
   Поиск ближайшего родителя по селектору
   https://github.com/oneuijs/You-Dont-Need-jQuery/blob/master/README-ru.md#1.6

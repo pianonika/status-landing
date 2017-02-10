@@ -1,4 +1,4 @@
-;(function(scopedWindow) {
+$(function(scopedWindow) {
     'use strict'
 
     var $ = scopedWindow.$
