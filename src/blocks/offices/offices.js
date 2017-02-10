@@ -32,10 +32,16 @@ $(function () {
        center: [55.75399400, 37.62209300],
        zoom: 9,
        controls: ['zoomControl']
-   });
+   }),
+   BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+       '<div style="background-color:red;">' +
+           '123' +        '</div>'
+   );
 
    myCollection = new ymaps.GeoObjectCollection();
    myCollection.removeAll();
+
+
 
    var objects = [
 
@@ -44,10 +50,12 @@ $(function () {
                balloonContentBody: "<div class='map_address'>г. Москва, ул. Ходынский б-р, д. 4</div><div class='map_phone'><div class='icon'></div>+7 (495) 937-27-03 <br> Часы работы: <br>пн-чт: 10:00–23:00 <br> пт-сб:	10:00–24:00  <br> вс: 10:00-23:00</div></div>",
                name: 'myPlacemark_39'
            }, {
-               iconImageHref: '/img/morizo-logo.png',
-               iconImageSize: [39, 37],
-               iconImageOffset: [-12, -36],
-               hideIconOnBalloonOpen: true,
+               myBalloonContentBodyLayout: BalloonContentLayout,
+               iconLayout: 'default#image',
+               iconImageHref: '/img/mapIcon.png',
+               iconImageSize: [18, 18],
+               iconImageOffset: [-9, -9],
+               hideIconOnBalloonOpen: true
            }),
            //создаем массив с метками
 
@@ -56,12 +64,17 @@ $(function () {
                balloonContentBody: "<div class='map_address'>г. Москва, пл. Киевского Вокзала,  д. 2</div><div class='map_phone'><div class='icon'></div>Тел.: +7 (495) 229-19-91<br />Часы работы: <br />вс-чт 10:00 - 22:00<br />пт-сб 10:00 - 23:00</div></div>",
                name: 'myPlacemark_8'
            }, {
-               iconImageHref: '/img/morizo-logo.png',
-               iconImageSize: [39, 37],
-               iconImageOffset: [-12, -36],
-               hideIconOnBalloonOpen: true,
+               myBalloonContentBodyLayout: BalloonContentLayout,
+               iconLayout: 'default#image',
+               iconImageHref: '/img/mapIcon.png',
+               iconImageSize: [18, 18],
+               iconImageOffset: [-9, -9],
+               hideIconOnBalloonOpen: true
            })
      ];
+
+
+
 
 
    var i;
