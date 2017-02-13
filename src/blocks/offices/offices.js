@@ -38,6 +38,50 @@ $(function () {
            '123' +        '</div>'
    );
 
+   /* шаблон для балуна */
+   var myBalloonContentLayout = ymaps.templateLayoutFactory.createClass('<p>$[[options.contentBodyLayout]]</p>');
+   var myBalloonContentBodyLayout = ymaps.templateLayoutFactory.createClass('<div class="balloon_layout"><div class="balloon_content">$[[options.contentLayout]]</div><div class="balloon_close"></div><div class="balloon_tail"></div></div>', {
+        build: function () {
+            // необходим вызов родительского метода, чтобы добавить содержимое макета в DOM
+            this.constructor.superclass.build.call(this);
+            $('#layout-element').bind('mouseover', this.onNameHover);
+        },
+
+        clear: function () {
+            $('#layout-element').unbind('mouseover', this.onNameHover);
+            this.constructor.superclass.clear.call(this);
+        },
+
+        onNameHover: function () {
+            $('#layout-element').css('color', getRandomColor());
+        }
+    });
+    var myIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div class="balloon_content-header">$[properties.balloonContentHeader]</div>' +
+      '</div><div calss="balloon_content-body">$[properties.balloonContentBody]</div>', {
+        build: function () {
+            this.constructor.superclass.build.call(this);
+            $('#layout-element').bind('mouseover', this.onNameHover);
+        },
+
+        clear: function () {
+            $('#layout-element').unbind('mouseover', this.onNameHover);
+            this.constructor.superclass.clear.call(this);
+        },
+
+        onNameHover: function () {
+            $('#layout-element').css('color', getRandomColor());
+        }
+    });
+   ymaps.layout.storage.add('my#balloonLayout', myBalloonContentBodyLayout) ;
+   ymaps.layout.storage.add('my#balloonContentLayout', myIconContentLayout) ;
+
+
+
+
+
+
+
    myCollection = new ymaps.GeoObjectCollection();
    myCollection.removeAll();
 
@@ -47,7 +91,7 @@ $(function () {
 
      new ymaps.Placemark([55.79046306894659,37.53040900000002], {
                balloonContentHeader: "<h3 class='map_header'>ТРЦ «Авиапарк»</h3>",
-               balloonContentBody: "<div class='map_address'>г. Москва, ул. Ходынский б-р, д. 4</div><div class='map_phone'><div class='icon'></div>+7 (495) 937-27-03 <br> Часы работы: <br>пн-чт: 10:00–23:00 <br> пт-сб:	10:00–24:00  <br> вс: 10:00-23:00</div></div>",
+               balloonContentBody: "<div class='map_address'>Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1</div><div class='map_phone'>(495) 974-83-50</div><a href='mailto:office@rostatus.ru'>office@rostatus.ru </a>",
                name: 'myPlacemark_39'
            }, {
                myBalloonContentBodyLayout: BalloonContentLayout,
@@ -55,13 +99,15 @@ $(function () {
                iconImageHref: '/img/mapIcon.png',
                iconImageSize: [18, 18],
                iconImageOffset: [-9, -9],
-               hideIconOnBalloonOpen: true
+               hideIconOnBalloonOpen: false,
+               balloonLayout           : myBalloonContentBodyLayout,
+               balloonContentLayout    : myIconContentLayout
            }),
            //создаем массив с метками
 
      new ymaps.Placemark([55.744506, 37.566346], {
-               balloonContentHeader: "<h3 class='map_header'>ТРЦ «Европейский»</h3>",
-               balloonContentBody: "<div class='map_address'>г. Москва, пл. Киевского Вокзала,  д. 2</div><div class='map_phone'><div class='icon'></div>Тел.: +7 (495) 229-19-91<br />Часы работы: <br />вс-чт 10:00 - 22:00<br />пт-сб 10:00 - 23:00</div></div>",
+               balloonContentHeader: "<h3 class='map_header'>ТРЦ «Авиапарк»</h3>",
+               balloonContentBody: "<div class='map_address'>Россия, 163000, г. Архангельск, ул. Розы Люксембург, д.5,корп.1</div><div class='map_phone'>(8182) 63-32-60</div><a href='mailto:arkhangelsk@rostatus.ru'>arkhangelsk@rostatus.ru</a>",
                name: 'myPlacemark_8'
            }, {
                myBalloonContentBodyLayout: BalloonContentLayout,
@@ -69,7 +115,9 @@ $(function () {
                iconImageHref: '/img/mapIcon.png',
                iconImageSize: [18, 18],
                iconImageOffset: [-9, -9],
-               hideIconOnBalloonOpen: true
+               hideIconOnBalloonOpen: false,
+               balloonLayout           : myBalloonContentBodyLayout,
+               balloonContentLayout    : myIconContentLayout
            })
      ];
 

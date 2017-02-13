@@ -1,0 +1,34 @@
+.balloon {
+
+  &_layout {
+    width: 305px;
+      position: absolute;
+      bottom: 49px;
+
+    &::after {
+      content: '';
+      position: absolute;
+
+      border: 17px solid transparent;
+      border-left: 17px solid  #fff;
+      border-top: 17px solid  #fff;
+    }
+  }
+
+  &_content {
+    padding: 18px 18px 25px;
+    background: #fff;
+    color: @gray;
+    font: normal 14px/24px "helveticaneuecyrroman", Helvetica;
+
+    &-header {
+      font-weight: bold;
+
+      & h3 {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+
+}

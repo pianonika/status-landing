@@ -14,31 +14,41 @@ $(function () {
    });
 
 
-    baron({
-       root: '.baron__clipper--offices',
-       scroller: '.scroller',
-       bar: '.scroller__bar',
-     });
+
+var openCounter = 0;
 
 
-   $('select').styler({
-     onFormStyled: function () {
-       console.log('После загрузки');
-       if ($('.form_field-select').find('.baron__scroller').length == 0 ) {
-         var scroll = $('<div class="scroller__bar-wrapper"> <div class="scroller__bar"></div></div>');
-         var scrollContainer = $('.jq-selectbox__dropdown');
-         $(scrollContainer).append(scroll).find('ul').wrap('<div class="baron__clipper baron__clipper--select"></div>').wrap('<div class="scroller"></div>');
-         var clipper = $('.jq-selectbox__dropdown .baron__clipper');
-         $(clipper).append(scroll).
-         baron({
-           root: '.baron__clipper',
-           scroller: '.scroller',
-           bar: '.scroller__bar',
-         })
-       }
+
+   $('.icon-text').on('click', function () {
+     $('.offices-section').toggle();
+     if (openCounter < 1) {
+       $('select').styler({
+         onFormStyled: function () {
+           if ($('.form_field-select').find('.baron__scroller').length == 0 ) {
+             var scroll = $('<div class="scroller__bar-wrapper"> <div class="scroller__bar"></div></div>');
+             var scrollContainer = $('.jq-selectbox__dropdown');
+             $(scrollContainer).append(scroll).find('ul').wrap('<div class="baron__clipper baron__clipper--select"></div>').wrap('<div class="scroller"></div>');
+             var clipper = $('.jq-selectbox__dropdown .baron__clipper');
+             $(clipper).append(scroll);
+             baron({
+               root: '.baron__clipper',
+               scroller: '.scroller',
+               bar: '.scroller__bar',
+             })
+           }
+         }
+       });
+       openCounter = 1;
      }
-   });
+     else {
+       console.log('уже стилизовано');
+     }
 
+   })
+
+   $('.close-big').on('click', function () {
+     $(this).closest('.offices-section').hide();
+   })
 });
 
 

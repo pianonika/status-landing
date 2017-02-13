@@ -24,3 +24,32 @@
 .mfp-content-holder .mfp-close-btn-in .mfp-close {
   color: @color-highlight;
 }
+
+
+.close-big {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 53px;
+  top: 53px;
+  cursor: pointer;
+
+  &::before,
+  &::after  {
+    content: '';
+    height: 1px;
+    width: 46px;
+    background-color:  @gray-lightest;
+    position:  absolute;
+  }
+  &::before {
+    transform: rotate(-45deg);
+    top: 16px;
+left: -4px;
+  }
+  &::after {
+    transform: rotate(45deg);
+    top: 16px;
+    left: -3px;
+  }
+}
