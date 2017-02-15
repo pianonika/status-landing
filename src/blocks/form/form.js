@@ -11,7 +11,6 @@ $(function($){
 	        required: ".checkbox_input--another:checked"
 	      }
 	    },
-	    debug: true,
 	    success: "valid",
 	    errorElement: 'span',
 	    errorPlacement: function(error, element) {
@@ -45,61 +44,24 @@ $(function($){
 	    validClass: 'is-valid',
 	    ignore: '.ignore',
 
-	    submitHandler: function(form) {
-	      // $(form).ajaxSubmit({
-	      //   beforeSubmit: function(formData, jqForm, options){
-	      //     $this_form.find('input[type=submit], button[type=submit]').prop('disabled', true);
-	      //   },
-	      //
-	      //   success: function(responseText, statusText, xhr){
-	      //
-	      //     var responseFromServer =  JSON.parse(responseText);
-	      //     //var messages = makeMsgFromArray(responseFromServer.massages);
-	      //     var $mfpContent = $('<div/>').addClass('mfp-content-holder').append(messages);
-	      //
-	      //     $this_form.find('input[type=submit], button[type=submit]').prop('disabled', false);
-	      //
-	      //     $.magnificPopup.open({
-	      //       items: {
-	      //         type: 'inline',
-	      //         src: $mfpContent
-	      //       }
-	      //     });
-	      //
-	      //     if ( responseFromServer.result) {
-	      //       ($this_form).resetForm();
-	      //     }
-	      //
-	      //   },
-	      //
-	      //   error: function(responseText, statusText, xhr){
-	      //     $this_form.find('input[type=submit], button[type=submit]').prop('disabled', false);
-	      //
-	      //     //var messages = "Ошибка сервера. Попробуйте повторить попытку позднее";
-	      //     var $mfpContent = $('<div/>').addClass('mfp-content-holder').append(messages);
-	      //
-	      //     $.magnificPopup.open({
-	      //       items: {
-	      //         type: 'inline',
-	      //         src: $mfpContent
-	      //       }
-	      //     });
-	      //
-	      //   }
-	      // });
-	      var $mfpContent = $('<div/>').addClass('mfp-content-holder').append('<h1 class="popup_header">Спасибо</h1> <p>Ваше обращение зарегистрировано.<br> Наши сотрудники ответят на него в ближайшее время.</p>');
-	      $.magnificPopup.open({
-	        items: {
-	          type: 'inline',
-	          src: $mfpContent
-	        }
-	      });
-	      return false;
-	    }
 	  });
+
 	});
 
 	$('.phone').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+	if (typeof window.submitHandler !== 'function') {
+		return;
+	}
+
+	window.submitHandler(form).done(function () {
+		$.magnificPopup.open({
+			items: {
+				type: 'inline',
+				src: '#submit-popup'
+			}
+		});
+	})
 });
 
 // function makeMsgFromArray(array){

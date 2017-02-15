@@ -260,7 +260,7 @@
                   <div class="num-item_text"  data-aos="fade" data-aos-offset="100" data-aos-duration="300" data-aos-delay="450">
                     <div class="num-item_comment">
                       Заполните заявление,<br> получите логин и пароль
-                      <a href="/" class="icon-text">
+                      <a href="javascript:void(0);" class="icon-text load-docs">
                             <div class="icon-text_img">
                               <svg width="23" height="27"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#doc-ico"></use></svg>
                             </div>
@@ -302,6 +302,7 @@
                         <label for="email" class="form_field-header" name="emal" aria-required="true">Выберите город</label>
                         <div class="form_field form_field-select">
                           <select name="choose-citiy" id="cities" class="form_select">
+                              <option value="all" data-name='all'>Все</option>
                               <option value="55.75399400, 37.62209300">Москва</option>
                               <option value="59.91815364, 30.30557800">Санкт-Петербург</option>
                               <option value="51.69427264, 39.33576650">Архангельск</option>
@@ -536,6 +537,52 @@
       </div>
     </section>
 
+    <div class="popups">
+      <div class="popup " id="submit-popup">
+       <h1 class="popup_header">Спасибо</h1>
+       <p>Ваше обращение зарегистрировано.<br> Наши сотрудники ответят на него в ближайшее время.</p>
+      </div>
+      <div class="popup popup--wide" id="popup-docs">
+       <h1 class="popup_header">Формы документов</h1>
+       <table class="table--default table--popup">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="files_item files_item--lonely-in-row">
+                    <a href="#" class="file file_link">
+                      <div class="file_format">doc</div>
+                      <div class="file_name">Заявление на предоставление доступа<br>для акционеров – физических лиц</div>
+                    </a>
+                  </div>
+                </td>
+                <td><a href="#" class="download-btn"></a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="files_item files_item--lonely-in-row">
+                    <a href="#" class="file file_link">
+                      <div class="file_format">doc</div>
+                      <div class="file_name">Заявление на предоставление доступа<br>для акционеров – юридических лиц</div>
+                    </a>
+                  </div>
+                </td>
+                <td><a href="#" class="download-btn"></a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="files_item files_item--lonely-in-row">
+                    <a href="#" class="file file_link">
+                      <div class="file_format">pdf</div>
+                      <div class="file_name">Регламент доступа и использования сервиса «Кабинет акционера»</div>
+                    </a>
+                  </div>
+                </td>
+                <td><a href="#" class="download-btn"></a></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
     </div>
     <script type="text/javascript">
 

@@ -1,8 +1,7 @@
-.content table {
+.content table,
+.table--default {
   font: normal 16px/21px 'helveticaneuecyr', Helvetica;
   width: 100%;
-  margin-left: -15px;
-  //
 
   & thead {
     border-bottom: 1px solid @gray-lightest;
@@ -11,14 +10,20 @@
     & td {
       font: bold 16px/21px 'helveticaneuecyrroman', Helvetica;
       text-transform: uppercase;
+      vertical-align: top;
+      text-align: left;
+      padding: 15px 21px;
     }
   }
 
-  & th,
-  & td {
-    text-align: left;
-    padding: 15px 21px;
+
+  & tr:last-of-type {
+    border-bottom: 1px solid  @gray-lightest;
   }
+}
+
+.content table {
+  margin-left: -15px;
 
   tbody {
 
@@ -26,8 +31,32 @@
       background:  @gray-lightest;
     }
   }
+}
+
+.table--default  {
+  tbody {
+
+    & tr {
+      border-top: 1px solid  @gray-lightest;
+    }
+  }
+}
+
+.table--popup {
+  width: 570px;
+  position: relative;
+  left: -33px;
+  margin-bottom: 0;
+
+  & td:first-of-type {
+    padding: 15px 21px 27px 42px;
+  }
+
+  & td:last-of-type {
+    padding: 15px 35px 27px 21px;
+  }
 
   & tr:last-of-type {
-    border-bottom: 1px solid  @gray-lightest;
+    border-bottom: 0;
   }
 }

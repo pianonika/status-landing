@@ -13,13 +13,18 @@ $(function () {
      return false;
    });
 
-
+$('.load-docs').magnificPopup({
+    items: {
+      type: 'inline',
+      src: '#popup-docs'
+    }
+  });
 
 var openCounter = 0;
 
 
 
-   $('.icon-text').on('click', function () {
+   $('.show-offices').on('click', function () {
      $('.offices-section').toggle();
      if (openCounter < 1) {
        $('select').styler({
@@ -39,9 +44,6 @@ var openCounter = 0;
          }
        });
        openCounter = 1;
-     }
-     else {
-       console.log('уже стилизовано');
      }
 
    })

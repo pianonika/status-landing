@@ -1,0 +1,45 @@
+.download-btn {
+  display: block;
+  position: relative;
+  width: 43px;
+  height: 43px;
+  border: 2px solid @link-color;
+  background-color: @link-color;
+  border-radius: 50%;
+  top: 10px;
+
+  &:hover {
+    background-color: #fff;
+
+    &::before{
+      background-color: @link-color;
+    }
+    &::after {
+      border-color: @link-color;
+    }
+  }
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 31px;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -16px -1px;
+}
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 3px -5.5px;
+    width: 9px;
+    height: 9px;
+    border-top: solid 1px #fff;
+    border-right: solid 1px #fff;
+    transform: rotate(135deg);
+  }
+}
