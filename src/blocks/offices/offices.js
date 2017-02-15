@@ -3,7 +3,6 @@ $(function () {
   $('select#cities').change(function() {
 
     var vals=$(this).val().split(' ');
-    console.log(vals);
   if (vals != 'all') {
 
     myMap.setCenter([vals[0].replace(',',''),vals[1]], 9, "map");
@@ -25,7 +24,8 @@ $(function () {
     $('.city-address_item').show();
     $('.baron__clipper--offices .scroller__bar-wrapper').show();
     $('.scroller').trigger('sizeChange');
-    myMap.setCenter([61.26883328,57.33156565], 4, "map");
+    myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange: true});
+    //    myMap.setBounds(myMap.geoObjects.getBounds());
   }
 
 });
@@ -86,48 +86,77 @@ function init() {
     myCollection = new ymaps.GeoObjectCollection();
     myCollection.removeAll();
 
-
-
-    var objects = [
-
-      new ymaps.Placemark([55.79046306894659, 37.53040900000002], {
-        balloonContentHeader: "<h3 class='map_header'>ТРЦ «Авиапарк»</h3>",
-        balloonContentBody: "<div class='map_address'>Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1</div><div class='map_phone'>(495) 974-83-50</div><a href='mailto:office@rostatus.ru'>office@rostatus.ru </a>",
-        name: 'myPlacemark_39'
-      }, {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/mapIcon.png',
-        iconImageSize: [18, 18],
-        iconImageOffset: [-9, -9],
-        hideIconOnBalloonOpen: false,
-        balloonLayout: myBalloonContentLayout,
-        balloonContentLayout: myBalloonContentBodyLayout
-      }),
-      //создаем массив с метками
-
-      new ymaps.Placemark([55.744506, 37.566346], {
-        balloonContentHeader: "<h3 class='map_header'>ТРЦ «Авиапарк»</h3>",
-        balloonContentBody: "<div class='map_address'>Россия, 163000, г. Архангельск, ул. Розы Люксембург, д.5,корп.1</div><div class='map_phone'>(8182) 63-32-60</div><a href='mailto:arkhangelsk@rostatus.ru'>arkhangelsk@rostatus.ru</a>",
-        name: 'myPlacemark_8'
-      }, {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/mapIcon.png',
-        iconImageSize: [18, 18],
-        iconImageOffset: [-9, -9],
-        hideIconOnBalloonOpen: false,
-        balloonLayout: myBalloonContentLayout,
-        balloonContentLayout: myBalloonContentBodyLayout
-      })
-    ];
-
-
-
-
-
-    var i;
-    for (i = 0; i < objects.length; i++) {
-      myCollection.add(objects[i]);
+    window.offices = {
+      1: {
+        city: 'Москва',
+        coords: '55.744506,37.566346',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '(495) 974-83-50',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_39',
+      },
+      2: {
+        city: 'Москва',
+        coords: '55.79046306894659,37.53040900000002',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '(495) 974-83-50',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_8',
+      },
+      3: {
+        city: 'Москва',
+        coords: '53.79046306894659,31.53040900000002',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '(495) 974-83-50',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_8',
+      },
+      4: {
+        city: 'Москва',
+        coords: '53.79046306894659,31.53040900000002',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '(495) 974-83-50',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_8',
+      },
     }
+
+
+
+
+    var objects = Object.values(offices).map(function(office) {
+      var coordChar = office.coords.split(',');
+      var coordinates = [coordChar[0],coordChar[1]];
+      myCollection.add(new ymaps.Placemark(coordinates, {
+                        balloonContentHeader: '<h3 class=\'map_header\'>' + office.city +'</h3>',
+                        balloonContentBody: '<div class=\"map_address\">' + office.address + '</div>'
+                        + '<div class=\'map_phone\'>'+ office.phone + '</div>'
+                        + '<a href=\mailto:arkhangelsk@rostatus.ru\'>' + office.email + '</a>',
+                        name: office.name
+                        }, {
+                          iconLayout: "default#image",
+                          iconImageHref: "/img/mapIcon.png",
+                          iconImageSize: [18, 18],
+                          iconImageOffset: [-9, -9],
+                          hideIconOnBalloonOpen: false,
+                          balloonLayout: myBalloonContentLayout,
+                          balloonContentLayout: myBalloonContentBodyLayout,
+                        })
+                      );
+      $('.city-address_inner').append('<div rel="' + office.name + '" class=\"city-address_item\" data-city="' + office.city + '\">'
+          + '<div class="city-address_item-ttl\">' + office.city + '</div>'
+          + '<div class=\"city-address_item-address\">' + office.address + '</div>'
+          + '<div class=\"city-address_item-time\">' + office.time + '</div>'
+          + '<div class=\"city-address_item-phone\"><a href="tel:8182633260">' + office.phone + '</a></div>'
+          + '<div class=\"city-address_item-email\"><a href="mailto:office@rostatus.ru">' + office.email + '</a></div>'
+        + '</div>');
+      return myCollection;
+    });
+
 
     myMap.geoObjects.add(myCollection);
 
