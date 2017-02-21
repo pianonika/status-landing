@@ -92,7 +92,7 @@ function init() {
         coords: '55.744506,37.566346',
         address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
         time: 'с 10:00 до 15:00 (без обеда)',
-        phone: '(495) 974-83-50',
+        phone: '84959748350',
         email: 'office@rostatus.ru',
         name: 'myPlacemark_39',
       },
@@ -101,7 +101,7 @@ function init() {
         coords: '55.79046306894659,37.53040900000002',
         address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
         time: 'с 10:00 до 15:00 (без обеда)',
-        phone: '(495) 974-83-50',
+        phone: '84959748350',
         email: 'office@rostatus.ru',
         name: 'myPlacemark_8',
       },
@@ -110,7 +110,7 @@ function init() {
         coords: '53.79046306894659,31.53040900000002',
         address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
         time: 'с 10:00 до 15:00 (без обеда)',
-        phone: '(495) 974-83-50',
+        phone: '84959748350',
         email: 'office@rostatus.ru',
         name: 'myPlacemark_8',
       },
@@ -119,7 +119,7 @@ function init() {
         coords: '53.79046306894659,31.53040900000002',
         address: 'Россия, 109544, г. Москва, ул. Новогорожская, д.3, стр. 1б',
         time: 'с 10:00 до 15:00 (без обеда)',
-        phone: '(495) 974-83-50',
+        phone: '84959748350',
         email: 'office@rostatus.ru',
         name: 'myPlacemark_8',
       },
@@ -127,14 +127,15 @@ function init() {
 
 
 
-
-    var objects = Object.values(offices).map(function(office) {
+      var keysOffices = Object.keys(offices);
+      var objects = Object.values(offices).map(function(office) {
       var coordChar = office.coords.split(',');
       var coordinates = [coordChar[0],coordChar[1]];
+      var phone = office.phone.replace(/(\d)(\d{3})(\d{3})(\d{2})(\d{2})/, '+7 ($2) $3-$4-$5');
       myCollection.add(new ymaps.Placemark(coordinates, {
                         balloonContentHeader: '<h3 class=\'map_header\'>' + office.city +'</h3>',
                         balloonContentBody: '<div class=\"map_address\">' + office.address + '</div>'
-                        + '<div class=\'map_phone\'>'+ office.phone + '</div>'
+                        + '<div class=\'map_phone\'>'+ phone + '</div>'
                         + '<a href=\mailto:arkhangelsk@rostatus.ru\'>' + office.email + '</a>',
                         name: office.name
                         }, {
@@ -151,7 +152,7 @@ function init() {
           + '<div class="city-address_item-ttl\">' + office.city + '</div>'
           + '<div class=\"city-address_item-address\">' + office.address + '</div>'
           + '<div class=\"city-address_item-time\">' + office.time + '</div>'
-          + '<div class=\"city-address_item-phone\"><a href="tel:8182633260">' + office.phone + '</a></div>'
+          + '<div class=\"city-address_item-phone\"><a href="tel:8' + office.phone + '">' + phone + '</a></div>' //  4959748350 => +7 (495) 974-83-50
           + '<div class=\"city-address_item-email\"><a href="mailto:office@rostatus.ru">' + office.email + '</a></div>'
         + '</div>');
       return myCollection;

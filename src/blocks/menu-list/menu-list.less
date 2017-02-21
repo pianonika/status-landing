@@ -1,8 +1,8 @@
 .menu-list {
-  justify-content: space-between;
+  //justify-content: space-between;
   display: flex;
   height: 100%;
-  width: 100%;
+  //width: 100%;
   margin: 0;
   padding: 0 5%;
 
@@ -11,6 +11,10 @@
     align-items:center;
     border-bottom: 3px solid rgba(0, 0, 0, 0);
     transition: all 0.3s;
+
+    &:not(:last-of-type) {
+      margin-right: 70px;
+    }
 
     &:hover, &--active {
       border-color: @color-highlight;
