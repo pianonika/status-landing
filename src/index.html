@@ -15,7 +15,7 @@
 
       @@include('blocks/page-header/page-header.html')
 
-      <section class="key-promo" style="background-image: url('img/rock-man.png');">
+      <section class="key-promo key-promo--shareholders">
 
         <div class="container">
 
@@ -34,10 +34,10 @@
           </div>
         </div>
 
-        <div class="key-promo_video-background">
+        <div class="key-promo_video-background key-promo_video-background--shareholders">
           <div class="key-promo_substrate"></div>
-          <video loop autoplay muted class="key-promo_video" id="vid"  poster="img/panorama.jpg">
-           <source src="/video/panorama.mp4">
+          <video loop autoplay muted class="key-promo_video" id="vid"  poster="/img/mountains.jpg">
+           <source src="/video/mountains.mp4">
           </video>
         </div>
 
@@ -338,6 +338,46 @@
 
                       <div id="map" style="width: 780px; height: 480px"></div>
                   </div>
+                  <script>
+                    window.offices = {
+                      1: {
+                        city: 'Москва',
+                        coords: '55.744506,37.566346',
+                        address: 'Россия, 109544, г. Москва, ул. Новогорожская1, д.3, стр. 1б',
+                        time: 'с 10:00 до 15:00 (без обеда)',
+                        phone: '84959748350',
+                        email: 'office@rostatus.ru',
+                        name: 'myPlacemark_39',
+                      },
+                      2: {
+                        city: 'Москва',
+                        coords: '55.79046306894659,37.53040900000002',
+                        address: 'Россия, 109544, г. Москва, ул. Новогорожская2, д.3, стр. 1б',
+                        time: 'с 10:00 до 15:00 (без обеда)',
+                        phone: '84959748350',
+                        email: 'office@rostatus.ru',
+                        name: 'myPlacemark_8',
+                      },
+                      3: {
+                        city: 'Москва',
+                        coords: '53.79046306894659,31.53040900000002',
+                        address: 'Россия, 109544, г. Москва, ул. Новогорожская3, д.3, стр. 1б',
+                        time: 'с 10:00 до 15:00 (без обеда)',
+                        phone: '84959748350',
+                        email: 'office@rostatus.ru',
+                        name: 'myPlacemark_8',
+                      },
+                      4: {
+                        city: 'Москва',
+                        coords: '53.79046306894659,31.53040900000002',
+                        address: 'Россия, 109544, г. Москва, ул. Новогорожская4, д.3, стр. 1б',
+                        time: 'с 10:00 до 15:00 (без обеда)',
+                        phone: '84959748350',
+                        email: 'office@rostatus.ru',
+                        name: 'myPlacemark_8',
+                      },
+                    }
+                  </script>
             </div>
           </div>
         </div>

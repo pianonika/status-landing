@@ -43,26 +43,22 @@ $(function($){
 	    errorClass: 'is-error',
 	    validClass: 'is-valid',
 	    ignore: '.ignore',
+			submitHandler: function(form) {
+				if (typeof window.submitHandler !== 'function') {
+					return;
+				}
 
+				window.submitHandler(form);
+			});
+
+			}
 	  });
 
 	});
 
 	$('.phone').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
-	if (typeof window.submitHandler !== 'function') {
-		return;
-	}
 
-	window.submitHandler(form).done(function () {
-		$.magnificPopup.open({
-			items: {
-				type: 'inline',
-				src: '#submit-popup'
-			}
-		});
-	})
-});
 
 // function makeMsgFromArray(array){
 // 	var msg = '';
