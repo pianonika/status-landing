@@ -88,6 +88,47 @@ function init() {
 
 
 
+
+    window.offices = {
+      1: {
+        city: 'Москва',
+        coords: '55.744506,37.566346',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская1, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '84959748350',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_39',
+      },
+      2: {
+        city: 'Москва',
+        coords: '55.79046306894659,37.53040900000002',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская2, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '84959748350',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_8',
+      },
+      3: {
+        city: 'Москва',
+        coords: '53.79046306894659,31.53040900000002',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская3, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '84959748350',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_8',
+      },
+      4: {
+        city: 'Москва',
+        coords: '53.79046306894659,31.53040900000002',
+        address: 'Россия, 109544, г. Москва, ул. Новогорожская4, д.3, стр. 1б',
+        time: 'с 10:00 до 15:00 (без обеда)',
+        phone: '84959748350',
+        email: 'office@rostatus.ru',
+        name: 'myPlacemark_8',
+      }
+    }
+
+    
       var keysOffices = Object.keys(offices);
       console.log(keysOffices);
       var objects = keysOffices.map(function(key) {
@@ -159,4 +200,5 @@ function init() {
 
   }
 }
+
 });

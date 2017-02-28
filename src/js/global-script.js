@@ -32,7 +32,7 @@ var openCounter = 0;
            if ($('.form_field-select').find('.baron__scroller').length == 0 ) {
              var scroll = $('<div class="scroller__bar-wrapper"> <div class="scroller__bar"></div></div>');
              var scrollContainer = $('.jq-selectbox__dropdown');
-             $(scrollContainer).append(scroll).find('ul').wrap('<div class="baron__clipper baron__clipper--select"></div>').wrap('<div class="scroller"></div>');
+             $(scrollContainer).append(scroll).find('ul').addClass('scroller').wrap('<div class="baron__clipper baron__clipper--select"></div>');
              var clipper = $('.jq-selectbox__dropdown .baron__clipper');
              $(clipper).append(scroll);
              baron({

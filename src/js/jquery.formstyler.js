@@ -692,17 +692,17 @@
 
 							var dropDown = function() {
 								dropdown.height('auto').css({bottom: 'auto', top: position});
-								var maxHeightBottom = function() {
-									ul.css('max-height', Math.floor((bottomOffset - 20 - searchHeight) / liHeight) * liHeight);
-								};
-								maxHeightBottom();
-								ul.css('max-height', newHeight);
-								if (isMaxHeight != 'none') {
-									ul.css('max-height', isMaxHeight);
-								}
-								if (bottomOffset < (dropdown.outerHeight() + 20)) {
-									maxHeightBottom();
-								}
+								// var maxHeightBottom = function() {
+								// 	ul.css('max-height', Math.floor((bottomOffset - 20 - searchHeight) / liHeight) * liHeight);
+								// };
+								// maxHeightBottom();
+								// ul.css('max-height', newHeight);
+								// if (isMaxHeight != 'none') {
+								// 	ul.css('max-height', isMaxHeight);
+								// }
+								// if (bottomOffset < (dropdown.outerHeight() + 20)) {
+								// 	maxHeightBottom();
+								// }
 							};
 
 							var dropUp = function() {
